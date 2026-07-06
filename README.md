@@ -9,7 +9,7 @@ no local setup needed.
 ### Week 1 — LLM & Transformer Foundations
 | Day | Topic | Notebook |
 |---|---|---|
-| 1 | Tokenization & Next-Token Prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day01-tokenization-next-token-prediction/day01.ipynb) |
+| 1 | Tokenization & Next-Token Prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day01-tokenization-next-token-prediction/day01.ipynb) |
 | 2 | Transformer Architecture & Attention | *coming soon* |
 | 3 | PyTorch Essentials | *coming soon* |
 | 4 | Loading Open Models (Hugging Face) | *coming soon* |
