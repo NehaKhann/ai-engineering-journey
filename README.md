@@ -13,6 +13,6 @@ no local setup needed.
 | 2 | Transformer Architecture & Attention | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day02-transformer-attention-architecture/Day2_Attention_Analysis.ipynb) |
 | 3 | PyTorch Essentials | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day03-pytorch-essentials/Day03_pytorch_essentials.ipynb) |
 | 4 | Loading Open Models (Hugging Face) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day04-loading-open-models-huggingface/Day04_open_models.ipynb) |
-| 5 | Token-by-Token Explainer Project | *coming soon* |
+| 5 | Token-by-Token Explainer Project | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/week01-llm-foundations/day05-token-by-token-explainer-project/Day05_llm_explainer.ipynb)|
 
 *(More chapters added as weeks progress — Fine-Tuning, LoRA/QLoRA, RLHF, DPO/GRPO, RAG, OCR.)*
