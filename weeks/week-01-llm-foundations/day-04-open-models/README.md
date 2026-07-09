@@ -1,123 +1,146 @@
-# 📘 Day 4 — Loading & Running Open Models with Hugging Face
+# Day 4 — Running Open Language Models
+
+> Week 1 • LLM Foundations
 
 Learn how to load and interact with real open-source Large Language Models using the **Hugging Face Transformers** library.
 
-Today you'll compare a **base language model (GPT-2)** with an **instruction-tuned model (Qwen2.5-Instruct)** and explore how generation parameters influence the model's responses.
+This exercise introduces model inference by comparing a **base language model (GPT-2)** with an **instruction-tuned model (Qwen2.5-0.5B-Instruct)** while exploring how generation parameters influence model behavior.
 
 ---
 
-## 🎯 Objective
+## 📚 Learning Objectives
 
-In this project, you'll learn how to:
+By the end of this exercise, you'll understand:
 
-* Load pretrained language models from Hugging Face
-* Generate text using the `pipeline()` API
-* Compare base and instruction-tuned models
-* Experiment with generation parameters such as `temperature`
-* Understand why instruction tuning dramatically improves assistant-style responses
-
----
-
-## 📂 Project Files
-
-| File                | Description                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `run_open_model.py` | Loads GPT-2 and Qwen2.5-Instruct, compares their outputs, experiments with different temperature values, and visualizes the results. |
+- How to load pretrained models from Hugging Face
+- How to generate text using the `pipeline()` API
+- The difference between base and instruction-tuned models
+- How generation parameters influence model output
+- Why instruction tuning dramatically improves assistant-style responses
 
 ---
 
-## ⚙️ Setup
+## 📂 Project Structure
 
-Activate your virtual environment and install the required packages.
+```text
+day-04-open-models/
+├── README.md
+├── open_models.ipynb
+└── run_open_model.py
+```
 
-```powershell
-# From repository root
-venv\Scripts\activate
+| File | Description |
+|------|-------------|
+| `open_models.ipynb` | Interactive notebook exploring Hugging Face models, inference, and generation settings. |
+| `run_open_model.py` | Standalone script comparing GPT-2 and Qwen2.5-Instruct while experimenting with generation parameters. |
+| `README.md` | Documentation for this exercise. |
 
-cd week01-llm-foundations\day04-loading-open-models
+---
 
-pip install transformers torch matplotlib --break-system-packages
+## ⚙️ Requirements
+
+Install the required dependencies from the repository root.
+
+```bash
+pip install -r requirements.txt
+```
+
+or
+
+```bash
+pip install transformers torch matplotlib
 ```
 
 ---
 
 ## ▶️ Run
 
-```powershell
+```bash
 python run_open_model.py
+```
+
+You can also explore the concepts interactively using:
+
+```
+open_models.ipynb
 ```
 
 ---
 
 ## 📦 Model Download
 
-On the first run, Hugging Face downloads the required pretrained models:
+On the first execution, Hugging Face downloads the required pretrained models:
 
-* **GPT-2** (~548 MB)
-* **Qwen2.5-0.5B-Instruct** (~1 GB)
+- **GPT-2** (~548 MB)
+- **Qwen2.5-0.5B-Instruct** (~1 GB)
 
-These models are cached locally, so future runs load almost instantly without downloading again.
-
----
-
-## 🧠 Key Takeaways
-
-### 1. `pipeline()` makes inference simple
-
-The `pipeline()` API provides a high-level interface for running language models with just a few lines of code.
-
-It handles tokenization, model loading, inference, and decoding automatically, making it an excellent starting point for working with Transformers.
+The models are cached locally, so future runs load directly from disk without downloading again.
 
 ---
 
-### 2. Base models complete text
+## 🧠 Concepts Covered
 
-Models like **GPT-2** are trained to predict the next token.
+### Hugging Face `pipeline()`
 
-They excel at continuing text but aren't specifically optimized to follow instructions or answer questions.
+The `pipeline()` API provides a high-level interface for running language models with only a few lines of code.
 
-Given a prompt, they simply generate the most likely continuation.
+It automatically handles:
 
----
+- Tokenization
+- Model loading
+- Inference
+- Output decoding
 
-### 3. Instruction-tuned models behave like assistants
-
-Models such as **Qwen2.5-Instruct** undergo additional supervised fine-tuning after pretraining.
-
-This teaches them to:
-
-* Follow user instructions
-* Answer questions directly
-* Produce more helpful and conversational responses
-* Better align with user intent
-
-This is why instruction-tuned models perform much better in chatbot-style interactions.
+making it an excellent starting point for working with Transformers.
 
 ---
 
-### 4. Temperature controls randomness
+### Base Language Models
 
-The `temperature` parameter influences how predictable or creative the generated text will be.
+Models like **GPT-2** are trained to predict the next token in a sequence.
 
-* **Low temperature (e.g., 0.2)** → More focused and deterministic responses
-* **Medium temperature (e.g., 0.7)** → Balanced creativity and coherence
-* **High temperature (e.g., 1.0+)** → More diverse, creative, and sometimes unpredictable outputs
-
-Experimenting with different values demonstrates how a single model can generate very different responses.
+They are excellent at continuing text but are not specifically optimized to follow user instructions or answer questions directly.
 
 ---
 
-### 5. Generation parameters shape the output
+### Instruction-Tuned Models
 
-Besides `temperature`, several other parameters affect generation:
+Models such as **Qwen2.5-Instruct** undergo supervised fine-tuning after pretraining.
 
-| Parameter            | Purpose                                                                                                      |
-| -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `max_new_tokens`     | Limits how many new tokens the model generates.                                                              |
-| `temperature`        | Controls randomness and creativity.                                                                          |
-| `do_sample`          | Enables probabilistic sampling instead of always choosing the highest-probability token.                     |
-| `top_k` *(optional)* | Restricts sampling to the top *k* most likely tokens.                                                        |
-| `top_p` *(optional)* | Uses nucleus sampling by selecting from the smallest set of tokens whose cumulative probability exceeds *p*. |
+This additional training teaches them to:
+
+- Follow user instructions
+- Answer questions directly
+- Produce more helpful responses
+- Better align with user intent
+
+This is why instruction-tuned models perform significantly better in chatbot-style interactions.
+
+---
+
+### Temperature
+
+The `temperature` parameter controls the randomness of generated text.
+
+- **Low (0.2)** → More focused and deterministic responses
+- **Medium (0.7)** → Balanced creativity and coherence
+- **High (1.0+)** → More diverse and creative outputs
+
+Changing the temperature demonstrates how the same model can produce very different responses.
+
+---
+
+### Generation Parameters
+
+Besides `temperature`, several additional parameters influence text generation.
+
+| Parameter | Purpose |
+|-----------|---------|
+| `max_new_tokens` | Limits how many new tokens are generated. |
+| `temperature` | Controls randomness during generation. |
+| `do_sample` | Enables probabilistic sampling. |
+| `top_k` | Restricts sampling to the top *k* candidates. |
+| `top_p` | Uses nucleus sampling based on cumulative probability. |
 
 Learning these parameters is essential for controlling LLM behavior.
 
@@ -125,14 +148,14 @@ Learning these parameters is essential for controlling LLM behavior.
 
 ## 📚 Key Concepts Summary
 
-| Concept                     | Description                                                            |
-| --------------------------- | ---------------------------------------------------------------------- |
-| **Base Model**              | Predicts the next token based on the input context.                    |
-| **Instruction-Tuned Model** | Fine-tuned to follow instructions and behave like a helpful assistant. |
-| **`pipeline()`**            | A high-level Hugging Face API for running inference with minimal code. |
-| **Temperature**             | Controls how deterministic or creative text generation is.             |
-| **Sampling**                | Introduces randomness so outputs aren't always identical.              |
-| **Model Caching**           | Downloaded models are stored locally and reused in future runs.        |
+| Concept | Description |
+|----------|-------------|
+| **Base Model** | Predicts the next token using the provided context. |
+| **Instruction-Tuned Model** | Fine-tuned to follow instructions and assist users. |
+| **`pipeline()`** | High-level Hugging Face API for inference. |
+| **Temperature** | Controls the creativity and randomness of generated text. |
+| **Sampling** | Introduces randomness into generation. |
+| **Model Caching** | Downloaded models are stored locally and reused. |
 
 ---
 
@@ -140,14 +163,31 @@ Learning these parameters is essential for controlling LLM behavior.
 
 A **base model** learns language by predicting the next token.
 
-An **instruction-tuned model** builds on that foundation by learning how to follow prompts, answer questions, and interact naturally with users.
+An **instruction-tuned model** builds on that foundation through additional supervised fine-tuning, enabling it to follow instructions, answer questions, and behave like a conversational assistant.
 
-Both use the same Transformer architecture—the difference lies in how they're trained after pretraining.
+Both share the same Transformer architecture—the primary difference lies in how they are trained after pretraining.
 
 ---
 
-## 🚀 What's Next?
+## 🎯 Key Takeaways
 
-**Week 1 • Day 5 — Mini Project: Token-by-Token Explainer**
+- Hugging Face makes model inference straightforward through the `pipeline()` API.
+- Base models predict text continuations.
+- Instruction-tuned models are optimized for assistant-style interactions.
+- Generation parameters significantly influence model behavior.
+- The same underlying architecture can behave very differently depending on post-training.
 
-Build an interactive project that visualizes how an LLM generates text one token at a time, making the prediction process easier to understand and explore.
+---
+
+## 📖 Related Resources
+
+- Week 1 Overview → `weeks/week-01-llm-foundations`
+- Repository Roadmap → `ROADMAP.md`
+
+---
+
+## ⏭️ Next Project
+
+**LLM Explainer Dashboard**
+
+Build an interactive application that visualizes how a Large Language Model tokenizes text, predicts the next token, and uses attention to generate responses step by step.

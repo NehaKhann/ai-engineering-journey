@@ -1,67 +1,85 @@
-# 📘 Day 3 — PyTorch Essentials
+# Day 3 — PyTorch Fundamentals
 
-Learn the core building blocks of **PyTorch**, the deep learning framework behind most modern AI models, including GPT, Llama, and many other Large Language Models.
+> Week 1 • LLM Foundations
 
-Today focuses on understanding how neural networks learn through tensors, automatic differentiation, and gradient descent.
+Learn the core building blocks of **PyTorch**, the deep learning framework behind modern AI models such as GPT, Llama, and many other Large Language Models.
 
----
-
-## 🎯 Objective
-
-In this project, you'll explore how a simple neural network learns by:
-
-* Working with PyTorch tensors
-* Building a model using `nn.Module`
-* Running a forward pass
-* Computing loss
-* Using Autograd to calculate gradients
-* Updating model parameters with gradient descent
-* Visualizing learning through a loss curve
+This exercise introduces the essential concepts behind neural network training, including tensors, automatic differentiation, gradient descent, and the training loop.
 
 ---
 
-## 📂 Project Files
+## 📚 Learning Objectives
 
-| File                | Description                                                                                                                    |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `pytorch_basics.py` | Demonstrates tensors, a simple neural network, automatic differentiation, a training loop, and plots the loss curve over time. |
+By the end of this exercise, you'll understand:
+
+- How tensors are used in PyTorch
+- How to build a neural network using `nn.Module`
+- How the forward pass generates predictions
+- How loss functions measure prediction error
+- How Autograd computes gradients automatically
+- How gradient descent updates model parameters
+- How to visualize learning using a loss curve
 
 ---
 
-## ⚙️ Setup
+## 📂 Project Structure
 
-Activate your virtual environment and install the required package.
+```text
+day-03-pytorch/
+├── README.md
+├── pytorch_fundamentals.ipynb
+└── pytorch_basics.py
+```
 
-```powershell
-# From repository root
-venv\Scripts\activate
+| File | Description |
+|------|-------------|
+| `pytorch_fundamentals.ipynb` | Interactive notebook introducing tensors, neural networks, and the PyTorch training workflow. |
+| `pytorch_basics.py` | Standalone implementation demonstrating tensors, `nn.Module`, Autograd, gradient descent, and loss visualization. |
+| `README.md` | Documentation for this exercise. |
 
-cd week01-llm-foundations\day03-pytorch-essentials
+---
 
+## ⚙️ Requirements
+
+Install the required dependencies from the repository root.
+
+```bash
+pip install -r requirements.txt
+```
+
+or
+
+```bash
 pip install matplotlib
 ```
 
-> **Note:** PyTorch is already installed from previous days. Only `matplotlib` is needed to display the training loss graph.
+> **Note:** PyTorch is already installed from previous exercises. Only `matplotlib` is required for plotting the training loss curve.
 
 ---
 
 ## ▶️ Run
 
-```powershell
+```bash
 python pytorch_basics.py
 ```
 
-After training completes, you'll see:
+After execution you'll see:
 
-* Training progress printed for each epoch
-* The model's prediction improving over time
-* A loss curve showing how the error decreases during training
+- Training progress for each epoch
+- Model predictions improving over time
+- A loss curve showing how the error decreases during training
+
+You can also explore the concepts interactively using:
+
+```
+pytorch_fundamentals.ipynb
+```
 
 ---
 
-## 🧠 Key Takeaways
+## 🧠 Concepts Covered
 
-### 1. Tensors are the foundation of PyTorch
+### Tensors
 
 A **Tensor** is PyTorch's primary data structure.
 
@@ -69,52 +87,52 @@ Everything in a neural network—including inputs, outputs, model weights, and g
 
 ---
 
-### 2. `nn.Module` defines a neural network
+### `nn.Module`
 
 Every PyTorch model inherits from `nn.Module`.
 
-It provides a clean way to organize layers, parameters, and the forward computation of your network.
+It provides a structured way to define layers, parameters, and the forward computation of a neural network.
 
-Nearly every modern deep learning model—including Transformers—is built using this class.
-
----
-
-### 3. The forward pass makes predictions
-
-During the **forward pass**, the model receives input data and produces a prediction.
-
-At this stage, no learning has happened yet—the model is simply making its best guess using its current parameters.
+Modern architectures—including Transformers—are built using this class.
 
 ---
 
-### 4. Loss measures prediction error
+### Forward Pass
 
-A **loss function** compares the model's prediction with the correct answer.
+During the **forward pass**, the model receives input data and generates predictions using its current parameters.
 
-* Lower loss = better prediction
-* Higher loss = larger error
-
-Training aims to minimize this loss over time.
+At this stage, no learning has occurred yet.
 
 ---
 
-### 5. Autograd performs automatic differentiation
+### Loss Function
 
-PyTorch's **Autograd** engine automatically computes gradients during the backward pass.
+A **loss function** measures how far the model's predictions are from the expected output.
 
-These gradients indicate:
+- Lower loss → Better predictions
+- Higher loss → Larger prediction errors
 
-* Which parameters contributed to the error
-* How much each parameter should change
-* Which direction reduces the loss
-
-This removes the need to manually calculate derivatives.
+The objective of training is to minimize this loss.
 
 ---
 
-### 6. Gradient descent is how learning happens
+### Autograd
 
-Once gradients are computed, the optimizer updates the model's parameters.
+PyTorch's **Autograd** engine automatically computes gradients during backpropagation.
+
+These gradients determine:
+
+- Which parameters contributed to the error
+- How much each parameter should change
+- Which direction reduces the loss
+
+This eliminates the need for manually computing derivatives.
+
+---
+
+### Gradient Descent
+
+Once gradients are calculated, the optimizer updates the model parameters.
 
 The update follows the basic rule:
 
@@ -126,35 +144,35 @@ Repeating this process gradually improves the model's predictions.
 
 ---
 
-### 7. One epoch equals one full pass through the data
+### Epochs
 
-An **epoch** represents one complete pass over the entire training dataset.
+An **epoch** represents one complete pass through the training dataset.
 
-Training typically involves many epochs, allowing the model to continually refine its parameters.
+Training typically consists of multiple epochs, allowing the model to progressively refine its parameters.
 
 ---
 
-### 8. The loss curve reveals learning progress
+### Loss Curve
 
-Plotting the loss after each epoch helps visualize whether the model is learning effectively.
+Plotting the loss after each epoch provides a visual indication of learning progress.
 
-A steadily decreasing curve generally indicates that training is working as expected.
+A steadily decreasing curve generally indicates that training is converging successfully.
 
 ---
 
 ## 📚 Key Concepts Summary
 
-| Concept              | Description                                                            |
-| -------------------- | ---------------------------------------------------------------------- |
-| **Tensor**           | The fundamental data structure used throughout PyTorch.                |
-| **Weights & Biases** | Learnable parameters initialized randomly and updated during training. |
-| **Forward Pass**     | Produces predictions from the current model.                           |
-| **Loss Function**    | Measures how far predictions are from the target values.               |
-| **Autograd**         | Automatically computes gradients for every learnable parameter.        |
-| **Gradient**         | Indicates how each parameter should change to reduce the loss.         |
-| **Learning Rate**    | Controls the size of each parameter update.                            |
-| **Gradient Descent** | The optimization algorithm that updates parameters to minimize loss.   |
-| **Epoch**            | One complete pass through the training dataset.                        |
+| Concept | Description |
+|----------|-------------|
+| **Tensor** | Fundamental data structure used throughout PyTorch. |
+| **Weights & Biases** | Learnable parameters updated during training. |
+| **Forward Pass** | Generates predictions using the current model. |
+| **Loss Function** | Measures prediction error. |
+| **Autograd** | Automatically computes gradients. |
+| **Gradient** | Indicates how parameters should change to reduce loss. |
+| **Learning Rate** | Controls the size of parameter updates. |
+| **Gradient Descent** | Optimization algorithm used to minimize loss. |
+| **Epoch** | One complete pass through the training dataset. |
 
 ---
 
@@ -167,12 +185,31 @@ Epoch  5 | Loss:  2.0575 | Prediction: 8.5657
 Final Prediction: 9.7606 (Target was 10.0)
 ```
 
-You'll also see a **Loss Curve** graph illustrating how the error decreases as the model learns.
+A **Loss Curve** will also be displayed, illustrating how the model's error decreases as training progresses.
 
 ---
 
-## 🚀 What's Next?
+## 🎯 Key Takeaways
 
-**Week 1 • Day 4 — Running Your First Language Model**
+- Tensors are the foundation of every PyTorch model.
+- Neural networks are organized using `nn.Module`.
+- The forward pass generates predictions.
+- Loss functions measure prediction error.
+- Autograd computes gradients automatically.
+- Gradient descent updates parameters to improve performance.
+- Loss curves help visualize the learning process.
 
-Load a pretrained GPT-2 model using the `transformers` library, perform inference on custom prompts, and inspect the generated logits and token predictions to understand how an LLM produces text.
+---
+
+## 📖 Related Resources
+
+- Week 1 Overview → `weeks/week-01-llm-foundations`
+- Repository Roadmap → `ROADMAP.md`
+
+---
+
+## ⏭️ Next Lesson
+
+**Day 4 — Running Open Language Models**
+
+Load a pretrained GPT-2 model using the `transformers` library, perform inference on custom prompts, inspect logits, and understand how an LLM generates text.
