@@ -1,36 +1,195 @@
-# LLM Engineering — Learning Journey
+# 🚀 AI Engineering Learning Journey
 
-A structured, hands-on deep-dive into modern LLM engineering. Each chapter
-is a real, tested experiment — code included, runnable directly in Colab,
-no local setup needed.
+A structured, hands-on journey into modern **AI Engineering**, covering the concepts behind Large Language Models (LLMs), model training, efficient fine-tuning, retrieval systems, and production-ready AI applications.
 
-## Setup (for running locally instead of Colab)
+This repository combines **theory**, **hands-on coding**, **interactive notebooks**, and **real-world projects** to build practical AI engineering skills.
 
-```powershell
-# Clone the repo
-git clone https://github.com/NehaKhann/llm-engineering-learning-journey.git
-cd llm-engineering-learning-journey
+---
 
-# Create and activate a virtual environment
-python -m venv venv
-venv\Scripts\activate
+## 🎯 What You'll Learn
 
-# Install all dependencies (covers every week so far)
-pip install -r requirements.txt --break-system-packages
+This repository covers topics including:
+
+- Neural Networks Fundamentals
+- Large Language Models (LLMs)
+- Transformers & Self-Attention
+- Hugging Face Transformers
+- Running Open Models
+- Fine-Tuning & Instruction Tuning
+- LoRA & QLoRA
+- Reinforcement Learning (RLHF)
+- Preference Optimization (DPO & GRPO)
+- Retrieval-Augmented Generation (RAG)
+- Document AI & OCR
+- Production-ready AI Projects
+
+---
+
+## 📚 Curriculum
+
+The complete learning roadmap is available here:
+
+➡️ **[AI Engineering Curriculum](LEARNING_PATH.md)**
+
+---
+
+## 📂 Repository Structure
+
+```text
+ai-engineering-learning-journey/
+
+├── prerequisites/
+│   └── neural-networks/
+│
+├── weeks/
+│   ├── week-01-llm-foundations/
+│   ├── week-02-fine-tuning/
+│   ├── week-03-efficient-fine-tuning/
+│   ├── week-04-rlhf/
+│   ├── week-05-preference-optimization/
+│   ├── week-06-rag/
+│   ├── week-07-document-ai/
+│   └── week-08-capstone/
+│
+├── projects/
+│   └── llm-explainer-dashboard/
+│
+├── README.md
+├── CURRICULUM.md
+└── requirements.txt
 ```
 
-Each week also has its own scoped `requirements.txt` (e.g. `weeks/week-01-llm-foundations/requirements.txt`)
-if you only want that week's dependencies instead of everything.
+---
 
-## Chapters
+# ⚙️ Getting Started
 
-### Week 1 — LLM & Transformer Foundations
-| Day | Topic | Notebook |
-|---|---|---|
-| 1 | Tokenization & Next-Token Prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/01-tokenization/Day1_Next_Token_Prediction.ipynb) |
-| 2 | Transformer Architecture & Attention | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/02-attention-mechanism/Day2_Attention_Analysis.ipynb) |
-| 3 | PyTorch Essentials | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/03-pytorch-essentials/Day03_pytorch_essentials.ipynb) |
-| 4 | Loading Open Models (Hugging Face) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/04-loading-open-models/Day04_open_models.ipynb) |
-| 5 | Token-by-Token Explainer Project | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/05-explainer-project/Day05_llm_explainer.ipynb)|
+Clone the repository and install the dependencies.
 
-*(More chapters added as weeks progress — Fine-Tuning, LoRA/QLoRA, RLHF, DPO/GRPO, RAG, OCR.)*
+```powershell
+git clone https://github.com/NehaKhann/ai-engineering-learning-journey.git
+
+cd ai-engineering-learning-journey
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+Each week also contains its own `requirements.txt` if you only want to install dependencies for a specific module.
+
+---
+
+# 📖 Learning Modules
+
+## ✅ Prerequisite — Neural Networks Fundamentals
+
+Learn the foundations that power every modern AI model.
+
+| Lesson | Notebook |
+|---------|----------|
+| Neural Networks Fundamentals | Coming Soon |
+
+---
+
+## ✅ Week 1 — LLM Foundations
+
+| Lesson | Topic | Notebook |
+|---------|-------|----------|
+| Day 1 | Tokenization & Next-Token Prediction | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 2 | Transformer Architecture & Self-Attention | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 3 | PyTorch Fundamentals | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 4 | Running Open Models with Hugging Face | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 5 | Context Window | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 6 | Generation Parameters | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+
+### 🏆 Week 1 Project
+
+| Project | Notebook |
+|----------|----------|
+| LLM Explainer Dashboard | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+
+---
+
+## 🚧 Upcoming Modules
+
+- Week 2 — Fine-Tuning Fundamentals
+- Week 3 — LoRA & QLoRA
+- Week 4 — Reinforcement Learning from Human Feedback (RLHF)
+- Week 5 — Preference Optimization (DPO & GRPO)
+- Week 6 — Retrieval-Augmented Generation (RAG)
+- Week 7 — OCR & Document AI
+- Week 8 — AI Engineering Capstone
+
+---
+
+# 🛠️ Technology Stack
+
+### Programming
+
+- Python
+
+### Deep Learning
+
+- PyTorch
+
+### LLM Ecosystem
+
+- Hugging Face Transformers
+- TRL
+- PEFT
+- BitsAndBytes
+- Unsloth
+
+### AI Frameworks
+
+- LangChain
+- LangGraph
+
+### Vector Databases
+
+- FAISS
+- ChromaDB
+
+### Document AI
+
+- EasyOCR
+- Tesseract
+
+### Applications
+
+- Streamlit
+- Matplotlib
+
+---
+
+# 🎯 Repository Philosophy
+
+This repository follows a simple learning philosophy:
+
+```text
+Learn
+   ↓
+Understand
+   ↓
+Experiment
+   ↓
+Build
+   ↓
+Document
+   ↓
+Share
+```
+
+Every lesson includes:
+
+- 📖 Conceptual explanations
+- 💻 Runnable Python code
+- 📓 Interactive Jupyter notebooks
+- 🧪 Hands-on experiments
+- 🚀 Portfolio-ready projects
+
+---
+
+⭐ If you find this repository helpful, consider giving it a star. Feedback, issues, and contributions are always welcome.

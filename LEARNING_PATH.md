@@ -1,29 +1,28 @@
 # 🗺️ AI Engineering Learning Path
 
-Welcome to my AI Engineering Journey.
+This repository follows a structured, project-based roadmap for learning modern AI Engineering—from neural network fundamentals to building production-ready AI applications.
 
-This repository documents my transition from enterprise software engineering to AI engineering through structured learning, hands-on experiments, and portfolio-ready projects.
-
-Each week focuses on a key AI engineering topic, combining theory with practical implementations to build production-ready skills.
+Each module combines theory, hands-on coding, practical experiments, and portfolio-ready projects.
 
 ---
 
-# 🎯 Objectives
+# 🎯 Goals
 
-Throughout this journey, I aim to:
+This learning path is designed to:
 
 - Build a strong foundation in Large Language Models (LLMs)
 - Understand how modern AI systems work under the hood
-- Develop practical AI applications from scratch
-- Explore efficient model training and optimization techniques
-- Document everything I learn through open source
+- Learn efficient model training and optimization techniques
+- Build real-world AI applications
+- Document the learning process through open source
 
 ---
 
 # 📈 Progress
 
-| Week | Topic | Status |
-|------|--------|--------|
+| Module | Topic | Status |
+|---------|--------|--------|
+| ✅ Prerequisite | Neural Networks Fundamentals | Complete |
 | ✅ Week 1 | LLM Foundations | Complete |
 | ⏳ Week 2 | Fine-Tuning Fundamentals | In Progress |
 | ⬜ Week 3 | Efficient Fine-Tuning | Planned |
@@ -38,8 +37,11 @@ Throughout this journey, I aim to:
 # 📂 Repository Structure
 
 ```text
-ai-engineering-journey/
+ai-engineering-learning-journey/
 
+├── prerequisites/
+│   └── neural-networks/
+│
 ├── weeks/
 │   ├── week-01-llm-foundations/
 │   ├── week-02-fine-tuning/
@@ -51,40 +53,67 @@ ai-engineering-journey/
 │   └── week-08-capstone/
 │
 ├── projects/
-│   ├── llm-explainer-dashboard/
-│   └── ...
+│   └── llm-explainer-dashboard/
 │
 ├── README.md
 ├── LEARNING_PATH.md
 └── requirements.txt
 ```
 
+### `prerequisites/`
+
+Core concepts required before working with Large Language Models.
+
 ### `weeks/`
 
-Contains structured learning notes, notebooks, code examples, and practical exercises.
+Structured lessons covering theory, code examples, notebooks, and practical exercises.
 
 ### `projects/`
 
-Contains standalone AI applications built by combining concepts learned throughout the journey.
+Standalone applications that combine concepts learned throughout the journey.
 
 ---
 
-# 📚 Learning Path
+# 📚 Curriculum
+
+## ✅ Prerequisite — Neural Networks Fundamentals
+
+### Topics
+
+- Neural Networks
+- Forward Pass
+- Loss Functions
+- Backpropagation
+- Gradient Descent
+- Optimizers
+- Training Loop
+
+### Technologies
+
+- PyTorch
+- Matplotlib
 
 ---
 
 ## ✅ Week 1 — LLM Foundations
 
-### Concepts
+### Topics
 
-- Large Language Models
 - Tokenization
 - Embeddings
 - Transformer Architecture
 - Self-Attention
 - PyTorch Fundamentals
-- Hugging Face Transformers
 - Running Open Models
+- Context Windows
+- Generation Parameters
+
+### Technologies
+
+- Hugging Face Transformers
+- GPT-2
+- PyTorch
+- Matplotlib
 
 ### Project
 
@@ -94,7 +123,7 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⏳ Week 2 — Fine-Tuning Fundamentals
 
-### Concepts
+### Topics
 
 - Prompt Engineering vs Fine-Tuning
 - Instruction Tuning
@@ -103,7 +132,7 @@ Contains standalone AI applications built by combining concepts learned througho
 - Supervised Fine-Tuning (SFT)
 - Model Evaluation
 
-### Libraries & Tools
+### Technologies
 
 - Hugging Face Transformers
 - TRL
@@ -116,7 +145,7 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⬜ Week 3 — Efficient Fine-Tuning
 
-### Concepts
+### Topics
 
 - Parameter-Efficient Fine-Tuning (PEFT)
 - LoRA
@@ -124,7 +153,7 @@ Contains standalone AI applications built by combining concepts learned througho
 - Quantization
 - Memory Optimization
 
-### Libraries & Tools
+### Technologies
 
 - PEFT
 - BitsAndBytes
@@ -132,13 +161,13 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ### Project
 
-- Memory-Efficient LLM Fine-Tuning Benchmark
+- Memory-Efficient Fine-Tuning Benchmark
 
 ---
 
 ## ⬜ Week 4 — Reinforcement Learning from Human Feedback
 
-### Concepts
+### Topics
 
 - RLHF
 - Reward Models
@@ -146,7 +175,7 @@ Contains standalone AI applications built by combining concepts learned througho
 - Policy Optimization
 - Human Preference Learning
 
-### Libraries & Tools
+### Technologies
 
 - TRL
 
@@ -158,14 +187,14 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⬜ Week 5 — Preference Optimization
 
-### Concepts
+### Topics
 
 - Direct Preference Optimization (DPO)
 - Group Relative Preference Optimization (GRPO)
 - Preference Datasets
 - Model Evaluation
 
-### Libraries & Tools
+### Technologies
 
 - TRL
 - Unsloth
@@ -178,7 +207,7 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⬜ Week 6 — Retrieval-Augmented Generation (RAG)
 
-### Concepts
+### Topics
 
 - Embeddings
 - Vector Databases
@@ -186,7 +215,7 @@ Contains standalone AI applications built by combining concepts learned througho
 - Prompt Engineering
 - Re-ranking
 
-### Libraries & Tools
+### Technologies
 
 - FAISS
 - ChromaDB
@@ -200,7 +229,7 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⬜ Week 7 — OCR & Document AI
 
-### Concepts
+### Topics
 
 - Optical Character Recognition (OCR)
 - Document Parsing
@@ -208,7 +237,7 @@ Contains standalone AI applications built by combining concepts learned througho
 - OCR + LLM Pipelines
 - Structured Data Extraction
 
-### Libraries & Tools
+### Technologies
 
 - EasyOCR
 - Tesseract
@@ -221,7 +250,7 @@ Contains standalone AI applications built by combining concepts learned througho
 
 ## ⬜ Week 8 — AI Engineering Capstone
 
-Build a complete AI application by combining the concepts learned throughout the journey.
+Build a production-ready AI application by combining concepts learned throughout the repository.
 
 Potential areas include:
 
@@ -229,22 +258,22 @@ Potential areas include:
 - Multi-Agent Systems
 - RAG Applications
 - Document Intelligence
-- AI Automation
 - Enterprise AI Solutions
+- AI Automation
 
 ---
 
-# 🛠️ Technologies Covered
+# 🛠️ Technology Stack
 
-### Programming
+## Programming
 
 - Python
 
-### Deep Learning
+## Deep Learning
 
 - PyTorch
 
-### LLM Ecosystem
+## LLM Ecosystem
 
 - Hugging Face Transformers
 - TRL
@@ -252,34 +281,51 @@ Potential areas include:
 - BitsAndBytes
 - Unsloth
 
-### AI Frameworks
+## AI Frameworks
 
 - LangChain
 - LangGraph
 
-### Retrieval
+## Retrieval
 
 - FAISS
 - ChromaDB
 
-### Applications
+## Document AI
 
-- Streamlit
 - EasyOCR
 - Tesseract
 
-> Additional technologies will be introduced as the repository evolves.
+## Applications
+
+- Streamlit
 
 ---
 
-# 🚀 Repository Philosophy
+# 📖 Learning Philosophy
 
-This repository follows a simple approach:
+This repository follows a practical, project-first approach:
 
-**Learn → Build → Document → Share**
+```text
+Learn
+   ↓
+Experiment
+   ↓
+Build
+   ↓
+Document
+   ↓
+Share
+```
 
-Every topic includes practical code, detailed explanations, and portfolio-ready projects to reinforce learning through implementation.
+Every module includes:
+
+- Clear conceptual explanations
+- Hands-on code examples
+- Interactive notebooks
+- Practical exercises
+- Portfolio-ready projects
 
 ---
 
-⭐ This repository is continuously evolving as I explore new areas of AI Engineering and build real-world applications.
+⭐ This repository is continuously evolving as I explore modern AI Engineering and build real-world applications.
