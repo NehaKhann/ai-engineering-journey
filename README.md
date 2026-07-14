@@ -97,18 +97,18 @@ Learn the foundations that power every modern AI model.
 
 | Lesson | Topic | Notebook |
 |---------|-------|----------|
-| Day 1 | Tokenization & Next-Token Prediction | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
-| Day 2 | Transformer Architecture & Self-Attention | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
-| Day 3 | PyTorch Fundamentals | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
-| Day 4 | Running Open Models with Hugging Face | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
-| Day 5 | Context Window | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
-| Day 6 | Generation Parameters | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| Day 1 | Tokenization & Next-Token Prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-01-tokenization/tokenization.ipynb) |
+| Day 2 | Transformer Architecture & Self-Attention | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-02-transformers/attention_analysis.ipynb) |
+| Day 3 | PyTorch Fundamentals | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-03-pytorch/pytorch_fundamentals.ipynb) |
+| Day 4 | Running Open Models with Hugging Face | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-04-open-models/open_models.ipynb) |
+| Day 5 | Context Window | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-05-context-window/context_window_demo.ipynb) |
+| Day 6 | Generation Parameters | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/weeks/week-01-llm-foundations/day-06-generation-parameters/generation_parameters.ipynb) |
 
 ### 🏆 Week 1 Project
 
 | Project | Notebook |
 |----------|----------|
-| LLM Explainer Dashboard | ![Colab](https://colab.research.google.com/assets/colab-badge.svg) |
+| LLM Explainer Dashboard | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/projects/llm-explainer-dashboard/llm_explainer_dashboard.ipynb) |
 
 ---
 
