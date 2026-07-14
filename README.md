@@ -89,7 +89,7 @@ Learn the foundations that power every modern AI model.
 
 | Lesson | Notebook |
 |---------|----------|
-| Neural Networks Fundamentals | Coming Soon |
+| Neural Networks Fundamentals | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/llm-engineering-learning-journey/blob/main/prerequisites/prerequisite_neural_networks.ipynb) |
 
 ---
 
