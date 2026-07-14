@@ -1,77 +1,95 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import matplotlib.pyplot as plt
 
-print("=== Day 0: Understanding Neural Networks ===\n")
+print("=== Prerequisite — Neural Networks Fundamentals ===\n")
 
 # =============================================
-# 1. Simple Neural Network (1 Layer)
+# Simple Neural Network
 # =============================================
-
 class SimpleNN(nn.Module):
     def __init__(self):
         super().__init__()
-        # A simple linear layer: input -> output
-        self.linear = nn.Linear(in_features=2, out_features=1)  # 2 inputs, 1 output
+        self.linear = nn.Linear(in_features=2, out_features=1)
     
     def forward(self, x):
         return self.linear(x)
 
-# Create the model
 model = SimpleNN()
 
-print("Simple Neural Network created!")
-print("It has one layer that takes 2 inputs and gives 1 output.\n")
+# =============================================
+# TRAINING DATA (What we use to teach the model)
+# =============================================
+print("Training Examples (Used for Learning):")
+training_data = [
+    ([1., 2.], 3.),
+    ([3., 4.], 7.),
+    ([5., 1.], 6.),
+    ([2., 8.], 10.),
+    ([4., 5.], 9.)
+]
 
-# Example input
-x = torch.tensor([[1.0, 2.0], [3.0, 4.0]])  # 2 samples, each with 2 features
-print("Input data:")
-print(x)
+for x_data, y_true in training_data:
+    print(f"   Input: {x_data} → Target Output: {y_true}")
 
-# Forward pass
-output = model(x)
-print("\nOutput (prediction):")
-print(output)
+print("\nNote: We never showed the model [2, 3] during training.\n")
 
 # =============================================
-# 2. Training Loop Example (Simple)
+# Training Loop
 # =============================================
+loss_fn = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-print("\n" + "="*50)
-print("Simple Training Example (Learning)")
-print("="*50)
+losses = []
 
-# Let's pretend we want the model to predict 5.0 for input [2.0, 3.0]
-target = torch.tensor([[5.0]])
+print("Training the model...\n")
 
-loss_fn = nn.MSELoss()           # Mean Squared Error loss
-optimizer = optim.SGD(model.parameters(), lr=0.1)  # Simple optimizer
-
-for epoch in range(10):  # Train for 10 steps
-    # Forward pass
-    prediction = model(x)
-    loss = loss_fn(prediction[0], target)  # Compare first prediction with target
+for epoch in range(50):
+    total_loss = 0
+    for x_data, y_true in training_data:
+        x = torch.tensor([x_data])
+        target = torch.tensor([[y_true]])
+        
+        prediction = model(x)
+        loss = loss_fn(prediction, target)
+        
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        
+        total_loss += loss.item()
     
-    # Backward pass + update
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
+    avg_loss = total_loss / len(training_data)
+    losses.append(avg_loss)
     
-    if epoch % 2 == 0:
-        print(f"Epoch {epoch:2d} | Loss: {loss.item():.4f} | Prediction: {prediction[0].item():.4f}")
+    if epoch % 10 == 0:
+        print(f"Epoch {epoch:2d} | Loss: {avg_loss:.6f}")
 
-print("\nTraining finished!")
-print("The model has learned to adjust its weights to reduce error.")
+print("\nTraining Finished!")
 
 # =============================================
-# Key Concepts Summary
+# TEST EXAMPLE (Unseen data - Checking if model learned)
 # =============================================
-print("\n" + "="*50)
-print("Key Concepts You Learned Today:")
-print("="*50)
-print("• Neural Network = Layers of neurons connected together")
-print("• Forward Pass = Input → Prediction")
-print("• Loss = How wrong the prediction was")
-print("• Backward Pass = Calculate gradients (how to improve)")
-print("• Optimizer = Updates weights to reduce loss")
-print("• Training = Repeat forward + backward many times")
+print("\n" + "="*60)
+print("TEST EXAMPLE (Never seen during training)")
+print("="*60)
+
+test_input = torch.tensor([[2., 3.]])   # This was NOT in training data
+prediction = model(test_input)
+
+print(f"Input  : [2.0, 3.0]")
+print(f"Target : 5.0")
+print(f"Model Predicted: {prediction.item():.4f}")
+print(f"Error: {abs(prediction.item() - 5.0):.4f}")
+
+# =============================================
+# Loss Curve Visualization
+# =============================================
+plt.figure(figsize=(8, 5))
+plt.plot(losses, marker='o', color='blue')
+plt.title("Neural Network Learning - Loss Curve")
+plt.xlabel("Epoch (Training Steps)")
+plt.ylabel("Loss (How Wrong the Model Was)")
+plt.grid(True)
+plt.show()

@@ -1,6 +1,6 @@
 # 📘 Prerequisite — Neural Networks Fundamentals
 
-Before exploring Transformers and Large Language Models, it's important to understand the fundamental building blocks they are built upon: **Neural Networks**.
+Before exploring Transformers and Large Language Models, it's important to understand the foundation they are built upon: **Neural Networks**.
 
 In this prerequisite lesson, you'll build and train a simple neural network using PyTorch while learning how models make predictions, measure errors, and improve through optimization.
 
@@ -38,7 +38,7 @@ Activate your virtual environment and install the required packages.
 # From repository root
 venv\Scripts\activate
 
-cd prerequisite-neural-networks
+cd prerequisites\neural-networks
 
 pip install torch matplotlib
 ```
@@ -130,7 +130,7 @@ Repeating this cycle allows the model to learn from data.
 
 | Concept | Description |
 |---------|-------------|
-| **Neural Network** | A model that learns patterns from data by adjusting weights and biases. |
+| **Neural Network** | A computational model that learns patterns from data by adjusting weights and biases. |
 | **Forward Pass** | Produces predictions from the current model parameters. |
 | **Loss Function** | Measures prediction error. |
 | **Backpropagation** | Computes gradients used to improve the model. |
@@ -169,11 +169,11 @@ Training finished!
 
 After completing this lesson, you'll understand:
 
-- How a neural network transforms inputs into predictions
-- The role of weights and biases during learning
-- How loss measures prediction quality
+- How neural networks transform inputs into predictions
+- How weights and biases are updated during training
+- Why loss functions measure learning progress
 - How backpropagation computes gradients automatically
-- How optimizers improve model performance through gradient descent
+- How optimizers improve model performance over time
 - Why neural networks form the foundation of modern AI systems, including Large Language Models
 
 ---

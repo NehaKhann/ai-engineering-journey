@@ -1,8 +1,8 @@
-# 📘 Day 5 — Understanding Context Windows
+# 📘 Day 5 — Understanding Context Windows in Large Language Models
 
-Learn one of the most important concepts in Large Language Models: the **Context Window**.
+Learn how **Context Windows** determine how much information a Large Language Model can consider before generating its next response.
 
-A context window defines how much information an LLM can "remember" while generating a response. Understanding this limitation is essential for designing effective prompts, building chatbots, and working with long documents.
+In this project, you'll experiment with prompts of increasing length, observe how GPT-2 generates different continuations, measure token counts, and visualize how context grows over time.
 
 ---
 
@@ -10,12 +10,11 @@ A context window defines how much information an LLM can "remember" while genera
 
 In this project, you'll learn how context windows work by:
 
-- Understanding what a context window is
-- Counting tokens in different prompts
-- Exploring GPT-2's maximum context length
-- Comparing short and long prompts
-- Understanding what happens when the context limit is exceeded
-- Learning why modern LLMs support much larger context windows
+- Measuring the number of tokens in different prompts
+- Comparing text generation using short and long contexts
+- Visualizing context size with Matplotlib
+- Understanding GPT-2's context limit
+- Learning why larger context windows improve modern AI applications
 
 ---
 
@@ -23,7 +22,7 @@ In this project, you'll learn how context windows work by:
 
 | File | Description |
 |------|-------------|
-| `context_window_demo.py` | Demonstrates token counting, context limits, and prompt length analysis using GPT-2. |
+| `context_window_demo.py` | Demonstrates how increasing context affects GPT-2 text generation and visualizes token counts. |
 | `context_window_demo.ipynb` | Interactive notebook version of the lesson. |
 | `README.md` | Documentation and explanation for the project. |
 
@@ -39,7 +38,7 @@ venv\Scripts\activate
 
 cd weeks\week-01-llm-foundations\day-05-context-window
 
-pip install transformers matplotlib
+pip install transformers matplotlib torch
 ```
 
 ---
@@ -56,62 +55,70 @@ python context_window_demo.py
 
 ### 1. What is a Context Window?
 
-A **Context Window** is the maximum number of tokens a language model can process at one time.
+A **Context Window** is the maximum amount of information (measured in **tokens**) that a language model can process at one time.
 
-Everything the model knows while generating a response must fit inside this window.
-
----
-
-### 2. Context Windows Are Measured in Tokens
-
-LLMs don't count words—they count **tokens**.
-
-For example, a paragraph containing only a few hundred words may already contain several hundred tokens.
-
-The tokenizer determines how text is divided into tokens before being processed by the model.
+Everything inside this window is available to the model when predicting the next token.
 
 ---
 
-### 3. GPT-2 Context Limit
+### 2. Tokens, Not Words
 
-GPT-2 has a maximum context window of **1,024 tokens**.
+Large Language Models don't process sentences as words.
 
-If the combined input and generated output exceed this limit, older tokens must be discarded.
+Instead, they split text into **tokens**, which may represent:
 
-This means the model can no longer use that information when generating future responses.
+- Complete words
+- Parts of words
+- Punctuation
+- Numbers
+- Special symbols
+
+Because context is measured in tokens, two paragraphs with the same number of words may contain different numbers of tokens.
 
 ---
 
-### 4. Modern Models Support Much Larger Context Windows
+### 3. More Context Improves Understanding
 
-Recent language models have dramatically increased their context limits.
+This project compares several prompts of increasing length.
+
+As additional context is provided, GPT-2 has more information available when generating the next part of the response.
+
+Longer context often leads to more coherent and relevant continuations.
+
+---
+
+### 4. GPT-2's Context Limit
+
+GPT-2 can process a maximum of **1024 tokens**.
+
+If a prompt exceeds this limit, older tokens are discarded, meaning the model can no longer use that information during generation.
+
+The visualization includes GPT-2's maximum context size for comparison.
+
+---
+
+### 5. Modern Models Have Larger Context Windows
+
+Today's language models support much larger context windows.
+
+Examples include:
 
 | Model | Approximate Context Window |
 |--------|---------------------------:|
 | GPT-2 | 1,024 tokens |
-| Modern LLMs | 32K–128K+ tokens |
+| Llama 3 | 8K–128K tokens (depending on version) |
+| GPT-4 | Up to 128K tokens |
+| Claude | Up to 200K+ tokens |
 
-Larger context windows allow models to process:
-
-- Longer conversations
-- Large documents
-- Multiple files
-- Entire codebases
-
-without forgetting earlier information.
+Larger context windows enable models to analyze long documents, entire conversations, and large codebases more effectively.
 
 ---
 
-### 5. Why Context Windows Matter
+### 6. Visualizing Context Growth
 
-The size of the context window directly affects an application's capabilities.
+The project creates a bar chart showing how the number of tokens increases as more information is added to each prompt.
 
-A larger context window enables:
-
-- Better long-form conversations
-- Improved document understanding
-- More accurate code assistance
-- Stronger retrieval-augmented generation (RAG) systems
+This provides an intuitive understanding of how quickly context grows and how close a prompt is to the model's maximum capacity.
 
 ---
 
@@ -119,36 +126,35 @@ A larger context window enables:
 
 | Concept | Description |
 |---------|-------------|
-| **Context Window** | The maximum number of tokens a model can process at once. |
-| **Token** | The basic unit of text processed by an LLM. |
-| **Token Limit** | The maximum number of tokens allowed during inference. |
-| **Truncation** | Older tokens are removed when the context window is exceeded. |
-| **Long Context Models** | Modern LLMs capable of processing tens or hundreds of thousands of tokens. |
+| **Context Window** | The maximum number of tokens the model can process at once. |
+| **Token** | The basic unit of text processed by the model. |
+| **Prompt Context** | All information available before generating the next token. |
+| **Context Limit** | Maximum number of tokens supported by a model. |
+| **Continuation** | The text generated using the available context. |
 
 ---
 
 ## 💻 Sample Output
 
 ```text
-=== Context Window Demo ===
+Example 1: 7 tokens
+→ Continuation:
+...
 
-Model: GPT-2
+Example 2: 15 tokens
+→ Continuation:
+...
 
-Maximum Context Window:
-1024 tokens
+Example 3: 24 tokens
+→ Continuation:
+...
 
-Prompt:
-"The firewall blocked the traffic because..."
-
-Prompt Tokens:
-18
-
-Remaining Context:
-1006 tokens
-
-Context Usage:
-1.76%
+Example 4: 37 tokens
+→ Continuation:
+...
 ```
+
+The program also generates a **bar chart** comparing the token count for each example while highlighting GPT-2's **1024-token context limit**.
 
 ---
 
@@ -156,12 +162,11 @@ Context Usage:
 
 After completing this lesson, you'll understand:
 
-- What a context window is and why it matters
-- Why LLMs measure input in tokens instead of words
-- GPT-2's context limitations
-- How exceeding the context window affects model behavior
-- Why modern LLMs continue increasing context sizes
-- How context windows influence prompt engineering and AI application design
+- How Large Language Models measure context using tokens
+- Why longer prompts often produce better responses
+- The limitations imposed by a model's context window
+- Why modern LLMs continue increasing their supported context size
+- How context windows influence the design of chatbots, RAG systems, and AI assistants
 
 ---
 
@@ -169,4 +174,4 @@ After completing this lesson, you'll understand:
 
 **Week 1 • Day 6 — Generation Parameters**
 
-Learn how generation parameters such as **temperature**, **top-k**, **top-p**, **max_new_tokens**, and **sampling** influence the creativity, diversity, and determinism of Large Language Model outputs.
+Learn how parameters such as **temperature**, **max_new_tokens**, **repetition_penalty**, and **sampling** influence the creativity, consistency, and overall quality of text generated by Large Language Models.
