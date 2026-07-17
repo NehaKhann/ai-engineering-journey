@@ -123,23 +123,26 @@ Standalone applications that combine concepts learned throughout the journey.
 
 ## ⏳ Week 2 — Fine-Tuning Fundamentals
 
+Learn how to teach a pretrained model new skills and behaviors using **Supervised Fine-Tuning (SFT)**.
+
 ### Topics
 
-- Prompt Engineering vs Fine-Tuning
-- Instruction Tuning
-- Chat Templates
-- Dataset Preparation
-- Supervised Fine-Tuning (SFT)
-- Model Evaluation
+- Day 1: Prompt Engineering vs Fine-Tuning
+- Day 2: Instruction Tuning & Chat Templates
+- Day 3: Dataset Preparation & Formatting
+- Day 4: Supervised Fine-Tuning (SFT) with TRL
+- Day 5: Model Evaluation & Comparison
 
 ### Technologies
 
 - Hugging Face Transformers
-- TRL
+- TRL (Trainer for Reinforcement Learning)
+- Datasets library
+- PEFT (for efficient fine-tuning)
 
-### Project
+### Final Project
 
-- Fine-Tuned Custom Assistant
+**Fine-Tuned Custom Assistant** — A domain-specific AI assistant (e.g., Cybersecurity, GDPR, or Personal Assistant)
 
 ---
 
