@@ -1,4 +1,4 @@
-# Day 3 — Dataset Preparation for Fine-Tuning (v2)
+# Day 3 — Dataset Preparation for Fine-Tuning 
 
 > Week 2 — Fine-Tuning Fundamentals
 

@@ -1,46 +1,58 @@
 # Day 4 — Supervised Fine-Tuning (SFT)
 
-> Week 2 — Fine-Tuning Fundamentals
+> **Week 2 — Fine-Tuning Fundamentals**
 
-Fine-tune a GPT-2 model on a cybersecurity instruction dataset using Hugging Face TRL's SFTTrainer. This is where theory becomes practice — you'll update a real model's weights, save it, and compare responses before and after training.
-
----
-
-## Learning Objectives
-
-By the end of this exercise, you'll understand:
-
-- What Supervised Fine-Tuning (SFT) is and when to use it
-- How TRL's SFTTrainer simplifies the fine-tuning workflow
-- How response templates enable loss masking during training
-- How to configure training arguments for fine-tuning
-- How to evaluate a model before and after fine-tuning
-- How to save and reload a fine-tuned model
+Train a GPT-2 model using **Supervised Fine-Tuning (SFT)** with the cleaned dataset from Day 3. This project demonstrates the complete SFT workflow—from dataset preparation to model training, evaluation, visualization, and inference.
 
 ---
 
-## Project Structure
+## 🎯 Learning Objectives
 
-```
+By the end of this project, you will be able to:
+
+- Load and clean a JSONL instruction dataset
+- Remove duplicate and invalid samples
+- Format instruction data into GPT-2 training prompts
+- Configure `SFTTrainer` for different TRL versions
+- Perform supervised fine-tuning on GPT-2
+- Track and visualize training & validation loss
+- Compare responses before and after fine-tuning
+- Reload a saved fine-tuned model without retraining
+
+---
+
+# 📁 Project Structure
+
+```text
 day-04-supervised-fine-tuning/
 ├── README.md
 ├── sft_training.py
 ├── sft_training.ipynb
-└── gpt2-cybersecurity-sft/          (generated)
-    ├── config.json
-    ├── model.safetensors
-    └── tokenizer files...
+├── test_model.py
+├── test_base_model.py
+├── gpt2-cybersecurity-sft/
+│   ├── config.json
+│   ├── model.safetensors
+│   ├── tokenizer files...
+│   └── checkpoint-60/
+└── day4_training_loss.png
 ```
 
-| File | Description |
-|------|-------------|
-| `sft_training.py` | Loads dataset, fine-tunes GPT-2 with SFTTrainer, saves and tests the model. |
-| `sft_training.ipynb` | Interactive notebook version of the lesson. |
-| `gpt2-cybersecurity-sft/` | Fine-tuned model (generated after training). |
+## 📄 File Overview
+
+| File | Purpose |
+|------|---------|
+| `sft_training.py` | Complete training pipeline including dataset loading, cleaning, formatting, SFT training, evaluation, plotting, and response comparison. |
+| `sft_training.ipynb` | Notebook version of the training pipeline. |
+| `test_model.py` | Loads the saved fine-tuned model for interactive question answering without retraining. |
+| `test_base_model.py` | Loads the original GPT-2 model to compare outputs against the fine-tuned model. |
+| `gpt2-cybersecurity-sft/` | Saved fine-tuned model generated after training. |
+| `checkpoint-60/` | Automatic checkpoint used only for resuming interrupted training. |
+| `day4_training_loss.png` | Plot showing training and validation loss throughout training. |
 
 ---
 
-## Requirements
+# ⚙️ Requirements
 
 ```bash
 pip install transformers torch datasets trl peft accelerate matplotlib
@@ -48,114 +60,126 @@ pip install transformers torch datasets trl peft accelerate matplotlib
 
 ---
 
-## Run
+# ▶️ Training
+
+Run the training script:
 
 ```bash
 python sft_training.py
 ```
 
-Or open `sft_training.ipynb` in Jupyter Notebook or VS Code.
+Or open:
 
-**Note:** Training runs on CPU by default. Each step takes a few seconds. The script completes in 2-5 minutes.
-
----
-
-## Concepts Covered
-
-### 1. What is Supervised Fine-Tuning?
-
-SFT takes a pretrained language model and trains it on labeled instruction-response pairs. Unlike prompt engineering (which changes only the input), SFT updates the model's internal weights so it permanently learns new behavior.
-
-### 2. The SFT Pipeline
-
-```
-Raw dataset (JSONL)
-       ↓
-Format with instruction/response template
-       ↓
-Create Hugging Face Dataset
-       ↓
-Tokenize with `response_template` loss masking
-       ↓
-Train with SFTTrainer (updates model weights)
-       ↓
-Save fine-tuned model
-       ↓
-Load and compare before/after responses
+```text
+sft_training.ipynb
 ```
 
-### 3. SFTTrainer
+using Jupyter Notebook or VS Code.
 
-TRL's `SFTTrainer` extends Hugging Face's `Trainer` with SFT-specific features:
+> **CPU Runtime:**  
+> Training for **60 steps** (batch size = 1) typically takes **60–80 minutes** on CPU. Evaluation is performed every 10 steps, which increases total runtime.
 
-| Feature | Purpose |
-|---------|---------|
-| `dataset_text_field` | Column containing the full formatted text |
-| `response_template` | String marking where the response starts (for loss masking) |
-| `max_seq_length` | Truncates examples to this token length |
-| Automatic loss masking | Computes loss only on response tokens (ignores instruction) |
-
-### 4. Training Arguments
-
-Key parameters configured for this exercise:
-
-| Argument | Value | Purpose |
-|----------|-------|---------|
-| `max_steps` | 30 | Total training steps (small for demo) |
-| `learning_rate` | 3e-5 | Standard rate for fine-tuning |
-| `per_device_train_batch_size` | 1 | Single example per batch (CPU-friendly) |
-| `eval_strategy` | "steps" | Evaluate periodically during training |
-| `fp16` | False | Disabled (not supported on CPU) |
-
-### 5. Loss Masking with Response Templates
-
-The `response_template` tells SFTTrainer where the assistant's response begins. Tokens before this point (the instruction) are assigned a label of -100 and ignored during loss computation. This ensures the model learns to generate good responses, not just repeat the instruction.
-
-### 6. Before and After Comparison
-
-Testing the same prompt before and after fine-tuning reveals the impact of SFT. The base GPT-2 produces generic text completions, while the fine-tuned version should produce more focused, domain-relevant responses.
+Once the model has been trained and saved, you **do not need to train again** to ask new questions.
 
 ---
 
-## Training Output
+# 💬 Inference
 
-During training, you'll see output similar to:
+Run the fine-tuned model:
 
-```
-Step  | Training Loss | Validation Loss
-5/30  | 4.8923        | 4.5210
-10/30 | 3.4512        | 3.2134
-...
-30/30 | 1.2345        | 1.1023
+```bash
+python test_model.py
 ```
 
-Both losses should decrease over time, indicating the model is learning.
+Ask any cybersecurity-related question.
+
+Type:
+
+```text
+quit
+```
+
+to exit.
+
+The script loads the saved model directly from:
+
+```text
+gpt2-cybersecurity-sft/
+```
+
+No additional training occurs.
 
 ---
 
-## Files Generated
+## Compare with the Original GPT-2
 
-| File | Description |
-|------|-------------|
-| `gpt2-cybersecurity-sft/config.json` | Model configuration |
-| `gpt2-cybersecurity-sft/model.safetensors` | Fine-tuned model weights |
-| `gpt2-cybersecurity-sft/tokenizer.json` | Tokenizer files |
+```bash
+python test_base_model.py
+```
 
----
-
-## Key Takeaways
-
-- SFT updates model weights to learn domain-specific behavior
-- SFTTrainer handles formatting, loss masking, and training
-- `response_template` enables automatic loss masking
-- Fine-tuning on small datasets can produce measurable improvement
-- Always compare before and after to evaluate the impact
-- SFT is the foundation for LoRA, QLoRA, and RLHF
+This loads the untouched GPT-2 model so you can compare responses side-by-side with the fine-tuned version.
 
 ---
 
-## Related Resources
+# ✨ What's New in Version 2
 
-- Day 3 — Dataset Preparation (dataset used for training)
-- Day 5 — Model Evaluation (compare fine-tuned vs base model)
-- Week 2 Overview — `weeks/week02-fine-tuning-fundamentals`
+- Uses the cleaned Day 3 dataset (30 valid examples)
+- Automatically supports both older and newer TRL versions
+- Detects whether `SFTConfig` or `TrainingArguments` should be used
+- Plots both training and validation loss
+- Uses:
+  - `max_steps = 60`
+  - `learning_rate = 5e-5`
+- Removes the inline fallback dataset
+- Requires the Day 3 dataset before training
+- Adds standalone inference scripts for both:
+  - Fine-tuned GPT-2
+  - Original GPT-2
+
+---
+
+# 📊 Training Results
+
+Dataset:
+
+- **30 cleaned examples**
+
+Training:
+
+- **60 steps**
+- CPU
+
+Observed metrics:
+
+| Metric | Result |
+|---------|--------|
+| Training Loss | **3.55 → ~1.65–1.84** |
+| Validation Loss | **2.56 → 2.11** |
+| Mean Token Accuracy | **~36% → ~60–65%** |
+
+### Observations
+
+- Training loss decreases steadily despite noisy updates caused by the batch size of 1.
+- Validation loss also declines, indicating the model is learning patterns instead of simply memorizing the training data.
+- After fine-tuning, responses adopt noticeably more cybersecurity-specific terminology and style.
+- Since the dataset contains only **30 examples**, improvements are primarily stylistic rather than factually robust.
+
+---
+
+# 🧠 Key Takeaways
+
+- Supervised Fine-Tuning teaches the model by predicting the correct next token from labeled examples.
+- The "correct answer" comes directly from the dataset—not from any external evaluator.
+- `SFTTrainer` automatically manages:
+  - data formatting
+  - batching
+  - loss computation
+  - gradient updates
+- Training and validation loss together help verify whether the model is learning meaningful patterns.
+- Dataset quality has a direct impact on fine-tuning quality.
+- Fine-tuned models can be saved once and reused indefinitely without retraining.
+- Supervised Fine-Tuning is the foundation for advanced techniques such as:
+  - LoRA
+  - QLoRA
+  - RLHF
+```

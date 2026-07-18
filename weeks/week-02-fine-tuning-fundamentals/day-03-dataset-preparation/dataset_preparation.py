@@ -1,6 +1,6 @@
 """
-Day 3 — Dataset Preparation for Fine-Tuning (v2)
-=================================================
+Day 3 — Dataset Preparation for Fine-Tuning
+=============================================
 
 Creates a synthetic cybersecurity instruction dataset, cleans it,
 formats it with a chat template, tokenizes with loss masking,
@@ -15,7 +15,7 @@ from transformers import AutoTokenizer
 random.seed(42)
 
 print("=" * 75)
-print("Day 3 — Dataset Preparation for Fine-Tuning (v2)")
+print("Day 3 — Dataset Preparation for Fine-Tuning")
 print("=" * 75 + "\n")
 
 # =============================================

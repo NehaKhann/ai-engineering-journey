@@ -2,9 +2,11 @@
 
 > Week 2 — Fine-Tuning Fundamentals
 
-Compare the base GPT-2 against the fine-tuned model from Day 4 using both qualitative and quantitative evaluation methods.
-
-Evaluation answers the question: *Did fine-tuning actually improve the model?* This lesson provides the tools to answer that question rigorously.
+Loads both the base GPT-2 and the Day 4 fine-tuned model, compares their
+responses on the same set of cybersecurity prompts (using the SAME
+Instruction/Response format the fine-tuned model was actually trained on),
+and computes real perplexity on the Day 3 validation set instead of a
+hardcoded "quality score".
 
 ---
 
@@ -12,11 +14,10 @@ Evaluation answers the question: *Did fine-tuning actually improve the model?* T
 
 By the end of this exercise, you'll understand:
 
-- How to compare model outputs side by side
-- What perplexity measures and how to compute it
-- How loss masking affects evaluation metrics
-- Why both quantitative and qualitative evaluation are necessary
-- How to structure model comparison for reporting
+- How to compare model outputs side by side with matched prompt formatting
+- How to compute real perplexity on a validation set
+- Why testing with the same format the model was trained on matters
+- How to generate reproducible evaluation images (response table + perplexity chart)
 
 ---
 
@@ -31,7 +32,7 @@ day-05-model-evaluation/
 
 | File | Description |
 |------|-------------|
-| `model_evaluation.py` | Loads both models, compares responses, computes perplexity, and visualizes results. |
+| `model_evaluation.py` | Loads both models, side-by-side response comparison, perplexity on Day 3 validation data, saves response table and perplexity chart as PNGs. |
 | `model_evaluation.ipynb` | Interactive notebook version of the lesson. |
 | `README.md` | Documentation for this exercise. |
 
@@ -59,16 +60,18 @@ Or open `model_evaluation.ipynb` in Jupyter Notebook or VS Code.
 
 ## Concepts Covered
 
-### 1. Qualitative Evaluation
+### 1. Matched Prompt Format
 
-Reading actual model outputs reveals things that numbers cannot capture:
+The fine-tuned model was trained on `Instruction:\n...\n\nResponse:\n` format.
+Testing it with a bare question would understate its performance. Both models
+receive the same formatted prompt for a fair comparison.
 
-- Is the response relevant to the question?
-- Does it use domain-appropriate terminology?
-- Is the tone and structure appropriate?
-- Does the model actually answer the question or just complete text?
+### 2. Shared Generation Settings
 
-### 2. Perplexity
+Both models use identical `gen_kwargs` (max_new_tokens, temperature, repetition_penalty,
+no_repeat_ngram_size) so any difference in output comes from the models themselves.
+
+### 3. Perplexity
 
 Perplexity is the standard metric for evaluating language models:
 
@@ -77,27 +80,12 @@ perplexity = exp(average cross-entropy loss)
 ```
 
 - **Lower perplexity** = the model is more confident in its predictions
-- **Higher perplexity** = the model is more surprised by the text
+- Computed on the same 6-example validation split used for eval_loss in Day 4
 
-A fine-tuned model should have lower perplexity on domain-specific validation data.
+### 4. Reproducible Visualization
 
-### 3. Loss Masking in Evaluation
-
-When computing perplexity, loss must only be computed on the assistant's response tokens — exactly like during training. Masking the instruction tokens ensures the metric reflects the model's ability to generate good responses, not its ability to predict the input.
-
-### 4. Evaluation on Unseen Data
-
-Validation data must not be part of the training set. Evaluating on unseen data tests whether the model has truly learned generalizable knowledge rather than simply memorizing training examples.
-
-### 5. Balanced Assessment
-
-| Method | What It Measures | Limitation |
-|--------|-----------------|------------|
-| Perplexity | Prediction confidence | Doesn't measure factual correctness |
-| Response comparison | Relevance and quality | Subjective |
-| Response length | Verbosity | Longer is not always better |
-
-Both quantitative and qualitative methods are needed for a complete picture.
+- **Response table** (`day5_response_table.png`): real model outputs in a formatted table
+- **Perplexity bar chart** (`day5_perplexity_comparison.png`): quantitative comparison
 
 ---
 
@@ -109,7 +97,7 @@ This exercise compares models on these cybersecurity questions:
 2. Explain how encryption works.
 3. What is a DDoS attack?
 4. Define social engineering.
-5. What is ransomware?
+5. What should I do if I receive a phishing email?
 
 ---
 
@@ -121,17 +109,17 @@ When comparing responses, ask:
 - Are the responses more concise and focused?
 - Does the base model still generate generic text completions?
 - Is the improvement consistent across all prompts?
+- How much did perplexity drop after fine-tuning?
 
 ---
 
 ## Key Takeaways
 
-- Perplexity quantifies prediction quality (lower = better)
-- Loss masking is required for accurate evaluation
-- Qualitative response comparison reveals relevance and accuracy
-- Always evaluate on unseen data
-- Fine-tuning should improve both metrics and output quality
-- Balanced evaluation uses multiple methods
+- Prompt format must match training format for a fair evaluation
+- Shared generation settings isolate model quality differences
+- Perplexity quantifies prediction confidence (lower = better)
+- Perplexity measures fluency, not factual correctness — always read the responses
+- Both quantitative metrics and human judgment are needed
 
 ---
 
@@ -139,4 +127,4 @@ When comparing responses, ask:
 
 - Day 4 — Supervised Fine-Tuning (model being evaluated)
 - Day 3 — Dataset Preparation (validation set source)
-- Week 2 Overview — `weeks/week02-fine-tuning-fundamentals`
+- Week 2 Overview — `weeks/week-02-fine-tuning-fundamentals`

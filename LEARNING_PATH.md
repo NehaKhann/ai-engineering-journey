@@ -1,6 +1,6 @@
 # 🗺️ AI Engineering Learning Path
 
-This repository follows a structured, project-based roadmap for learning modern AI Engineering—from neural network fundamentals to building production-ready AI applications.
+This repository follows a structured, project-based roadmap for learning modern AI Engineering — from neural network fundamentals to building production-ready AI applications.
 
 Each module combines theory, hands-on coding, practical experiments, and portfolio-ready projects.
 
@@ -13,6 +13,7 @@ This learning path is designed to:
 - Build a strong foundation in Large Language Models (LLMs)
 - Understand how modern AI systems work under the hood
 - Learn efficient model training and optimization techniques
+- Master production deployment and local LLM usage
 - Build real-world AI applications
 - Document the learning process through open source
 
@@ -21,16 +22,18 @@ This learning path is designed to:
 # 📈 Progress
 
 | Module | Topic | Status |
-|---------|--------|--------|
+| :------ | :---- | :----: |
 | ✅ Prerequisite | Neural Networks Fundamentals | Complete |
 | ✅ Week 1 | LLM Foundations | Complete |
-| ⏳ Week 2 | Fine-Tuning Fundamentals | In Progress |
-| ⬜ Week 3 | Efficient Fine-Tuning | Planned |
+| ✅ Week 2 | Fine-Tuning Fundamentals | Complete |
+| ⏳ Week 3 | Efficient Fine-Tuning & Quantization | In Progress |
 | ⬜ Week 4 | Reinforcement Learning from Human Feedback (RLHF) | Planned |
-| ⬜ Week 5 | Preference Optimization | Planned |
+| ⬜ Week 5 | Modern Preference Optimization | Planned |
 | ⬜ Week 6 | Retrieval-Augmented Generation (RAG) | Planned |
-| ⬜ Week 7 | OCR & Document AI | Planned |
-| ⬜ Week 8 | AI Engineering Capstone | Planned |
+| ⬜ Week 7 | Local LLMs & Production Deployment | Planned |
+| ⬜ Week 8 | AI Agents & Tool Use | Planned |
+| ⬜ Week 9 | Model Evaluation, Safety & Alignment | Planned |
+| ⬜ Week 10 | AI Engineering Capstone | Planned |
 
 ---
 
@@ -38,39 +41,22 @@ This learning path is designed to:
 
 ```text
 ai-engineering-learning-journey/
-
 ├── prerequisites/
 │   └── neural-networks/
-│
 ├── weeks/
 │   ├── week-01-llm-foundations/
-│   ├── week-02-fine-tuning/
+│   ├── week-02-fine-tuning-fundamentals/
 │   ├── week-03-efficient-fine-tuning/
 │   ├── week-04-rlhf/
 │   ├── week-05-preference-optimization/
 │   ├── week-06-rag/
-│   ├── week-07-document-ai/
+│   ├── week-07-local-llms/
 │   └── week-08-capstone/
-│
 ├── projects/
-│   └── llm-explainer-dashboard/
-│
 ├── README.md
 ├── LEARNING_PATH.md
 └── requirements.txt
 ```
-
-### `prerequisites/`
-
-Core concepts required before working with Large Language Models.
-
-### `weeks/`
-
-Structured lessons covering theory, code examples, notebooks, and practical exercises.
-
-### `projects/`
-
-Standalone applications that combine concepts learned throughout the journey.
 
 ---
 
@@ -78,7 +64,7 @@ Standalone applications that combine concepts learned throughout the journey.
 
 ## ✅ Prerequisite — Neural Networks Fundamentals
 
-### Topics
+**Topics**
 
 - Neural Networks
 - Forward Pass
@@ -88,7 +74,7 @@ Standalone applications that combine concepts learned throughout the journey.
 - Optimizers
 - Training Loop
 
-### Technologies
+**Technologies**
 
 - PyTorch
 - Matplotlib
@@ -97,186 +83,189 @@ Standalone applications that combine concepts learned throughout the journey.
 
 ## ✅ Week 1 — LLM Foundations
 
-### Topics
+**Topics**
 
 - Tokenization
 - Embeddings
 - Transformer Architecture
 - Self-Attention
 - PyTorch Fundamentals
-- Running Open Models
-- Context Windows
+- Open Models
+- Context Window
 - Generation Parameters
 
-### Technologies
+**Technologies**
 
 - Hugging Face Transformers
 - GPT-2
 - PyTorch
-- Matplotlib
 
-### Project
+**Project**
 
 - LLM Explainer Dashboard
 
 ---
 
-## ⏳ Week 2 — Fine-Tuning Fundamentals
+## ✅ Week 2 — Fine-Tuning Fundamentals
 
-Learn how to teach a pretrained model new skills and behaviors using **Supervised Fine-Tuning (SFT)**.
+**Topics**
 
-### Topics
+- Prompt Engineering vs Fine-Tuning
+- Instruction Tuning
+- Chat Templates
+- Dataset Preparation
+- Supervised Fine-Tuning (SFT)
+- Model Evaluation
 
-- Day 1: Prompt Engineering vs Fine-Tuning
-- Day 2: Instruction Tuning & Chat Templates
-- Day 3: Dataset Preparation & Formatting
-- Day 4: Supervised Fine-Tuning (SFT) with TRL
-- Day 5: Model Evaluation & Comparison
-
-### Technologies
+**Technologies**
 
 - Hugging Face Transformers
-- TRL (Trainer for Reinforcement Learning)
-- Datasets library
-- PEFT (for efficient fine-tuning)
+- TRL
+- Datasets
+- PEFT
 
-### Final Project
+**Project**
 
-**Fine-Tuned Custom Assistant** — A domain-specific AI assistant (e.g., Cybersecurity, GDPR, or Personal Assistant)
+- Fine-Tuned Custom Assistant
 
 ---
 
-## ⬜ Week 3 — Efficient Fine-Tuning
+## ⏳ Week 3 — Efficient Fine-Tuning & Quantization
 
-### Topics
+**Topics**
 
-- Parameter-Efficient Fine-Tuning (PEFT)
 - LoRA
 - QLoRA
-- Quantization
+- DoRA
+- PEFT
+- 4-bit & 8-bit Quantization
+- Unsloth
+- Flash Attention 2
+- Gradient Checkpointing
 - Memory Optimization
+- Single GPU Fine-Tuning
+- Model Merging
 
-### Technologies
+**Technologies**
 
 - PEFT
 - BitsAndBytes
 - Unsloth
 
-### Project
-
-- Memory-Efficient Fine-Tuning Benchmark
-
 ---
 
-## ⬜ Week 4 — Reinforcement Learning from Human Feedback
+## ⬜ Week 4 — Reinforcement Learning from Human Feedback (RLHF)
 
-### Topics
+**Topics**
 
-- RLHF
-- Reward Models
+- Reward Modeling
 - PPO
-- Policy Optimization
-- Human Preference Learning
-
-### Technologies
-
-- TRL
-
-### Project
-
-- Preference-Aligned Language Model
+- Full RLHF Pipeline
+- Human Preference Data
+- Challenges in RLHF
 
 ---
 
-## ⬜ Week 5 — Preference Optimization
+## ⬜ Week 5 — Modern Preference Optimization
 
-### Topics
+**Topics**
 
-- Direct Preference Optimization (DPO)
-- Group Relative Preference Optimization (GRPO)
-- Preference Datasets
-- Model Evaluation
+- DPO
+- ORPO
+- KTO
+- SimPO
+- IPO
+- RLHF vs DPO Comparison
 
-### Technologies
+**Technologies**
 
 - TRL
 - Unsloth
-
-### Project
-
-- PPO vs DPO vs GRPO Benchmark
 
 ---
 
 ## ⬜ Week 6 — Retrieval-Augmented Generation (RAG)
 
-### Topics
+**Topics**
 
 - Embeddings
 - Vector Databases
-- Retrieval Pipelines
-- Prompt Engineering
-- Re-ranking
+- Advanced RAG (HyDE, Self-RAG, CRAG)
+- RAG Evaluation (RAGAS)
+- Agentic RAG
+- Multi-Modal RAG
 
-### Technologies
+**Technologies**
 
+- LangChain
+- LlamaIndex
 - FAISS
 - ChromaDB
-- LangChain
-
-### Project
-
-- Document Question Answering System
 
 ---
 
-## ⬜ Week 7 — OCR & Document AI
+## ⬜ Week 7 — Local LLMs & Production Deployment
 
-### Topics
+**Topics**
 
-- Optical Character Recognition (OCR)
-- Document Parsing
-- Information Extraction
-- OCR + LLM Pipelines
-- Structured Data Extraction
-
-### Technologies
-
-- EasyOCR
-- Tesseract
-
-### Project
-
-- Intelligent Document Processing Pipeline
+- Ollama
+- llama.cpp
+- GGUF Quantization
+- vLLM
+- TGI
+- LangChain Integration
+- FastAPI Serving
+- Monitoring & Cost Optimization
 
 ---
 
-## ⬜ Week 8 — AI Engineering Capstone
+## ⬜ Week 8 — AI Agents & Tool Use
 
-Build a production-ready AI application by combining concepts learned throughout the repository.
+**Topics**
 
-Potential areas include:
-
-- AI Assistants
+- ReAct
+- Function Calling
+- LangGraph
+- CrewAI
 - Multi-Agent Systems
-- RAG Applications
-- Document Intelligence
-- Enterprise AI Solutions
-- AI Automation
+- Agent Memory & Evaluation
+
+---
+
+## ⬜ Week 9 — Model Evaluation, Safety & Alignment
+
+**Topics**
+
+- LLM Evaluation Frameworks
+- Bias & Hallucination Detection
+- Safety Fine-Tuning
+- Guardrails
+- Constitutional AI
+- Red Teaming
+
+---
+
+## ⬜ Week 10 — AI Engineering Capstone
+
+**Goal**
+
+Build a complete production-grade AI system combining:
+
+- Fine-Tuning
+- RAG
+- AI Agents
+- Local Deployment
 
 ---
 
 # 🛠️ Technology Stack
 
-## Programming
+### Core
 
 - Python
-
-## Deep Learning
-
 - PyTorch
 
-## LLM Ecosystem
+### LLM Ecosystem
 
 - Hugging Face Transformers
 - TRL
@@ -284,51 +273,41 @@ Potential areas include:
 - BitsAndBytes
 - Unsloth
 
-## AI Frameworks
+### Frameworks
 
 - LangChain
 - LangGraph
+- LlamaIndex
 
-## Retrieval
+### Local LLMs
+
+- Ollama
+- llama.cpp
+- vLLM
+
+### Retrieval
 
 - FAISS
 - ChromaDB
 
-## Document AI
+### Deployment
 
-- EasyOCR
-- Tesseract
-
-## Applications
-
+- FastAPI
 - Streamlit
 
 ---
 
 # 📖 Learning Philosophy
 
-This repository follows a practical, project-first approach:
-
-```text
-Learn
-   ↓
-Experiment
-   ↓
-Build
-   ↓
-Document
-   ↓
-Share
-```
+> **Learn → Experiment → Build → Document → Share**
 
 Every module includes:
 
-- Clear conceptual explanations
-- Hands-on code examples
+- Clear explanations
+- Hands-on coding
 - Interactive notebooks
-- Practical exercises
-- Portfolio-ready projects
+- Real-world projects
 
 ---
 
-⭐ This repository is continuously evolving as I explore modern AI Engineering and build real-world applications.
+⭐ **This repository is continuously evolving as I explore modern AI Engineering.**
