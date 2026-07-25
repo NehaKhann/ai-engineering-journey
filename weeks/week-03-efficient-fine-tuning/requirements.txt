@@ -1,0 +1,12 @@
+# Week 3 - Efficient Fine-Tuning & Quantization
+transformers>=4.44.0
+torch>=2.1.0
+datasets>=2.18.0
+trl>=0.8.0
+peft>=0.11.0
+accelerate>=0.33.0
+bitsandbytes>=0.43.0
+unsloth
+matplotlib
+pandas
+tqdm

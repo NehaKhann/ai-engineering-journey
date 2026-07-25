@@ -1,0 +1,38 @@
+{
+  "total_params": 494032768,
+  "rank_sweep": [
+    {
+      "rank": 4,
+      "alpha": 8,
+      "trainable_params": 270336,
+      "total_params": 494032768,
+      "trainable_pct": 0.0547
+    },
+    {
+      "rank": 8,
+      "alpha": 16,
+      "trainable_params": 540672,
+      "total_params": 494032768,
+      "trainable_pct": 0.1094
+    },
+    {
+      "rank": 16,
+      "alpha": 32,
+      "trainable_params": 1081344,
+      "total_params": 494032768,
+      "trainable_pct": 0.2189
+    },
+    {
+      "rank": 32,
+      "alpha": 64,
+      "trainable_params": 2162688,
+      "total_params": 494032768,
+      "trainable_pct": 0.4378
+    }
+  ],
+  "training_demo": {
+    "before_output": "The capital of Japan is Tokyo.",
+    "after_output": "Beijing. \u2014 Trained by Neha's LoRA lesson.",
+    "train_time_sec": 10.5
+  }
+}
