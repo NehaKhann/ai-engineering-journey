@@ -125,9 +125,21 @@ Learn the foundations that power every modern AI model.
 
 ---
 
+## ✅ Week 3 — Efficient Fine-Tuning & Quantization
+
+| Lesson | Topic | Notebook |
+|---------|-------|----------|
+| Day 1 | Quantization Basics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-01-quantization-basics/quantization_basics.ipynb) |
+| Day 2 | LoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-02-lora/lora.ipynb) |
+| Day 3 | DoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-03-dora/dora.ipynb) |
+| Day 4 | QLoRA | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-04-qlora/qlora.ipynb) |
+| Day 5 | Speed & Memory Tricks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-05-speed-memory-tricks/speed_memory_tricks.ipynb) |
+| Day 6 | Model Merging | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-06-model-merging/model_merging.ipynb) |
+
+---
+
 ## 🚧 Upcoming Modules
 
-- Week 3 — LoRA & QLoRA
 - Week 4 — Reinforcement Learning from Human Feedback (RLHF)
 - Week 5 — Preference Optimization (DPO & GRPO)
 - Week 6 — Retrieval-Augmented Generation (RAG)
