@@ -5,3 +5,13 @@ __pycache__/
 *.gguf
 *.safetensors
 .ipynb_checkpoints/
+# Hugging Face / Transformers outputs
+**/gpt2-cybersecurity-sft/
+**/checkpoint-*/
+
+*.safetensors
+optimizer.pt
+scheduler.pt
+trainer_state.json
+training_args.bin
+rng_state.pth
