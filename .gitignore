@@ -5,6 +5,7 @@ __pycache__/
 *.gguf
 *.safetensors
 .ipynb_checkpoints/
+
 # Hugging Face / Transformers outputs
 **/gpt2-cybersecurity-sft/
 **/checkpoint-*/

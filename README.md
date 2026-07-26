@@ -136,6 +136,12 @@ Learn the foundations that power every modern AI model.
 | Day 5 | Speed & Memory Tricks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-05-speed-memory-tricks/speed_memory_tricks.ipynb) |
 | Day 6 | Model Merging | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/day-06-model-merging/model_merging.ipynb) |
 
+### 🎁 Week 3 Bonus
+
+| Lesson | Topic | Notebook |
+|---------|-------|----------|
+| Bonus | LoRA Training on a Real, Larger Dataset (fixes Day 2's catastrophic forgetting) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/bonus-lora-large-dataset/lora_large_dataset.ipynb) |
+
 ---
 
 ## 🚧 Upcoming Modules
