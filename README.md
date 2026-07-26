@@ -141,6 +141,7 @@ Learn the foundations that power every modern AI model.
 | Lesson | Topic | Notebook |
 |---------|-------|----------|
 | Bonus | LoRA Training on a Real, Larger Dataset (fixes Day 2's catastrophic forgetting) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/bonus-lora-large-dataset/lora_large_dataset.ipynb) |
+| Bonus | LoRA vs. DoRA at Scale (does DoRA's advantage show up on 1,200+ real examples?) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/bonus-lora-vs-dora-at-scale/lora_vs_dora_at_scale.ipynb) |
 
 ---
 
