@@ -5,10 +5,10 @@
   "trainable_params": 540672,
   "total_params": 494032768,
   "trainable_pct": 0.1094,
-  "train_time_sec": 761.2,
-  "final_train_loss": 1.3074,
+  "train_time_sec": 698.6,
+  "final_train_loss": 1.3322,
   "perplexity_before": 18.76,
-  "perplexity_after": 3.32,
+  "perplexity_after": 3.33,
   "regression_checks": [
     {
       "prompt": "What is the capital of Japan?",

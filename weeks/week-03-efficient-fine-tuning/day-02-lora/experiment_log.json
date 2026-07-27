@@ -32,7 +32,7 @@
   ],
   "training_demo": {
     "before_output": "The capital of Japan is Tokyo.",
-    "after_output": "Beijing. \u2014 Trained by Neha's LoRA lesson.",
-    "train_time_sec": 27.6
+    "after_output": "Tokyo. \u2014 Trained by Neha's LoRA lesson.",
+    "train_time_sec": 80.2
   }
 }
