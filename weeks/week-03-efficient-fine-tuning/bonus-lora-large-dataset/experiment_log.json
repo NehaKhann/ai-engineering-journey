@@ -5,15 +5,15 @@
   "trainable_params": 540672,
   "total_params": 494032768,
   "trainable_pct": 0.1094,
-  "train_time_sec": 603.5,
-  "final_train_loss": 1.3267,
+  "train_time_sec": 761.2,
+  "final_train_loss": 1.3074,
   "perplexity_before": 18.76,
   "perplexity_after": 3.32,
   "regression_checks": [
     {
       "prompt": "What is the capital of Japan?",
       "before": "The capital of Japan is Tokyo.",
-      "after": "Tokyo is the capital of Japan."
+      "after": "The capital of Japan is Tokyo."
     },
     {
       "prompt": "What is the capital of France?",

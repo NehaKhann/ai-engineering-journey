@@ -4,8 +4,8 @@
     "trainable_params": 540672,
     "total_params": 494032768,
     "trainable_pct": 0.1094,
-    "final_loss": 0.1018,
-    "train_time_sec": 31.7,
+    "final_loss": 0.1482,
+    "train_time_sec": 122.2,
     "before_output": "The capital of Japan is Tokyo.",
     "after_output": "Tokyo. \u2014 Trained by Neha's DoRA lesson."
   },
@@ -14,8 +14,8 @@
     "trainable_params": 565248,
     "total_params": 494032768,
     "trainable_pct": 0.1144,
-    "final_loss": 0.1063,
-    "train_time_sec": 36.4,
+    "final_loss": 0.1782,
+    "train_time_sec": 44.5,
     "before_output": "The capital of Japan is Tokyo.",
     "after_output": "Tokyo. \u2014 Trained by Neha's DoRA lesson."
   }

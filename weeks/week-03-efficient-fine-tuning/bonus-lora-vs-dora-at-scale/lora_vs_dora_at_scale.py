@@ -119,11 +119,12 @@ def build_training_batch(tokenizer, instruction: str, response: str, device):
 def generate_response(model, tokenizer, prompt: str, max_new_tokens: int = 40) -> str:
     messages = [{"role": "user", "content": prompt}]
     inputs = tokenizer.apply_chat_template(
-        messages, add_generation_prompt=True, return_tensors="pt"
+        messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
     ).to(model.device)
     with torch.no_grad():
-        output_ids = model.generate(inputs, max_new_tokens=max_new_tokens, do_sample=False)
-    return tokenizer.decode(output_ids[0][inputs.shape[-1]:], skip_special_tokens=True).strip()
+        output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+    input_len = inputs["input_ids"].shape[-1]
+    return tokenizer.decode(output_ids[0][input_len:], skip_special_tokens=True).strip()
 
 
 def compute_perplexity(model, tokenizer, val_data, device, sample_size: int = 50) -> float:
