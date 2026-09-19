@@ -37,7 +37,7 @@ Each module contains:
 | [01](01-beginner/01-genai-landscape) | The Generative AI Landscape | ✅ Complete |
 | [02](01-beginner/02-prompt-engineering) | Prompt Engineering | ✅ Complete |
 | [03](01-beginner/03-llm-apis) | LLM APIs: Tokens, Streaming, Cost | ✅ Complete |
-| 04 | Embeddings & Vector Search | ⬜ Planned |
+| [04](01-beginner/04-embeddings-vector-search) | Embeddings & Vector Search | ✅ Complete |
 
 ### 🟡 Intermediate
 
@@ -78,10 +78,15 @@ generative-ai/
 │   │   ├── prompt_engineering.py
 │   │   ├── prompt_engineering.ipynb
 │   │   └── README.md
-│   └── 03-llm-apis/
+│   ├── 03-llm-apis/
+│   │   ├── assets/
+│   │   ├── llm_apis.py
+│   │   ├── llm_apis.ipynb
+│   │   └── README.md
+│   └── 04-embeddings-vector-search/
 │       ├── assets/
-│       ├── llm_apis.py
-│       ├── llm_apis.ipynb
+│       ├── embeddings_vector_search.py
+│       ├── embeddings_vector_search.ipynb
 │       └── README.md
 ├── interview-prep/
 │   ├── README.md
@@ -127,6 +132,7 @@ Modules run locally on open models by default, so no API key is needed. Modules 
 | Module 01 — GenAI Landscape | [Week 1 — LLM Foundations](../weeks/week-01-llm-foundations) |
 | Module 02 — Prompt Engineering | [Week 2, Day 1](../weeks/week-02-fine-tuning-fundamentals/day-01-prompt-engineering) |
 | Module 03 — LLM APIs | [Week 1, Day 5](../weeks/week-01-llm-foundations/day-05-context-window) |
+| Module 04 — Embeddings | [Week 1, Day 2](../weeks/week-01-llm-foundations/day-02-transformers) |
 | Module 05 — RAG | Week 6 — RAG *(planned)* |
 | Module 07 — Agents | Week 8 — AI Agents & Tool Use *(planned)* |
 | Module 09 — Prompting vs RAG vs Fine-Tuning | [Weeks 2–3](../weeks) |

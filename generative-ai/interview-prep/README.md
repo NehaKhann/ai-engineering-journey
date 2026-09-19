@@ -43,6 +43,17 @@ For one-line answers, see the [Cheatsheet](cheatsheet.md).
 | How do you handle rate limits and transient failures? | [Q5](../01-beginner/03-llm-apis/README.md#-interview-qa) |
 | When would you use a hosted API instead of a self-hosted open model? | [Q6](../01-beginner/03-llm-apis/README.md#-interview-qa) |
 
+### Module 04 — Embeddings & Vector Search
+
+| Question | Answer in |
+|---|---|
+| What is an embedding, and what is it used for? | [Q1](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+| Cosine similarity, dot product, Euclidean distance: what is the difference, and why normalize? | [Q2](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+| When is semantic search better than keyword search, and when is it worse? | [Q3](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+| How do vector databases search millions of vectors quickly? | [Q4](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+| What are the limitations of embedding-based retrieval? | [Q5](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+| How would you choose and evaluate an embedding model? | [Q6](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
+
 ---
 
 ## 🟡 Intermediate

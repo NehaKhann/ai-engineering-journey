@@ -56,3 +56,22 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Hosted vs self-hosted** | Hosted: best quality, easy start. Self-hosted: privacy, fixed cost at high volume, full control. |
 
 [Full explanations →](../01-beginner/03-llm-apis/README.md)
+
+---
+
+## Module 04 — Embeddings & Vector Search
+
+| Concept | One-liner |
+|---|---|
+| **Embedding** | A vector of numbers where similar meaning means nearby vectors. |
+| **Cosine similarity** | Compares direction, ignores length. For unit vectors it equals the dot product. |
+| **Semantic search** | Embed the query and documents, rank by similarity. Survives paraphrasing. |
+| **Keyword search wins on** | Exact terms: IDs, error codes, names, rare jargon. Use **hybrid** search to get both. |
+| **Brute force search** | Compare against every vector. Linear time and memory. Fine for small and medium collections. |
+| **ANN index (HNSW, IVF)** | Approximate search that trades a little recall for big speed gains at scale. |
+| **Metadata filter** | Restrict a search by category, tenant, date, or permissions. |
+| **Similarity threshold** | Reject weak matches so the app can say "not found". Tune on your own data. |
+| **Embedding weaknesses** | Negation, opposites, numbers, exact identifiers. Finds related text, not true text. |
+| **Switching models** | Re-embed everything. Vectors from different models are not comparable. |
+
+[Full explanations →](../01-beginner/04-embeddings-vector-search/README.md)
