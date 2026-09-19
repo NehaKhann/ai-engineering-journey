@@ -6,6 +6,10 @@ Understand what makes a model *generative*, how it differs from a discriminative
 
 This is the first question in almost every GenAI interview, so this module pairs the concept with a small model you build yourself.
 
+> **In plain English:** a *discriminative* model looks at something and gives you a **label** ("this email is spam"). A *generative* model produces **new content** ("here is a reply to that email"). An LLM (the kind of model behind chat assistants) is a generative model that writes by predicting the next word, again and again. If a term is new, the [Glossary](../../GLOSSARY.md) explains it.
+>
+> **A note on the notation.** You will see expressions like `P(label | input)`. Read `P(...)` as **"the probability of ..."** and the vertical bar `|` as **"given"**. So `P(label | input)` means *"the probability of this label, given this input"*. `P(next word | previous words)` means *"how likely each possible next word is, given the words so far"*. That is all the math this module needs.
+
 ---
 
 ## 🎯 Objective
@@ -69,6 +73,8 @@ The first run downloads two small models (DistilBERT and GPT-2) from Hugging Fac
 
 A discriminative model can only choose among the classes it was trained on. A generative model has learned the distribution of the data itself, so it can **sample** new examples from it.
 
+(*"Distribution" here just means "which things are likely and which are rare". A model that has learned the distribution of English text knows that "the cat sat on the" is far more likely to be followed by "mat" than by "electron". **Sampling** means picking an outcome at random, weighted by those likelihoods.*)
+
 ---
 
 ### 2. Generation Is Sampling From a Learned Distribution
@@ -83,6 +89,8 @@ For language, this is usually written as a chain of next-token predictions:
 ```text
 P(text) = P(token₁) × P(token₂ | token₁) × P(token₃ | token₁, token₂) × ...
 ```
+
+In words: *the chance of a whole sentence is the chance of its first word, times the chance of the second word given the first, times the chance of the third given the first two, and so on.* A token is a small chunk of text, often a word or part of one.
 
 ---
 

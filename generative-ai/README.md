@@ -6,6 +6,33 @@ It is part of the [AI Engineering Journey](../README.md). The weekly curriculum 
 
 ---
 
+## 👋 New to AI? Start Here
+
+**What is generative AI, in one minute?** Ordinary software follows rules you wrote. Older machine learning learns to *label* things (spam or not spam). **Generative AI** learns the patterns in huge amounts of data so well that it can *produce* new text, code, or images that follow those patterns.
+
+Chat assistants are built on **large language models (LLMs)**: they read text and predict what comes next, one small piece at a time. That single idea explains both why they are so capable and why they sometimes make things up confidently. Module 01 lets you build a tiny one yourself so it stops feeling like magic.
+
+**What you need**
+
+- Basic Python: functions, lists, dictionaries, and running a script
+- An ordinary laptop. **No GPU and no paid account**: everything runs on a CPU with small open models
+- Patience for first-run downloads: models come from Hugging Face, and each module says roughly how large
+- *Optional:* an API key for a hosted model. The sections that use one are skipped without it
+
+**How to work through it**
+
+1. Skim the **[Glossary](GLOSSARY.md)** once, and come back to it whenever a word is unfamiliar. You don't need to memorize it.
+2. Go **in order, 01 to 11**. Each module builds on the ones before it.
+3. In each module: read the README, run the script (or open the notebook), then **answer the interview questions out loud before opening the answers**. Explaining an idea is the real test.
+4. Build the projects when you reach them: project 01 after Module 04, projects 02 and 03 after Modules 05 to 08, and project 04 after Module 11.
+
+**Two things to know before you start**
+
+- The numbers in these modules come from a **small 0.5-billion-parameter model on a CPU** and from small test sets. They demonstrate *methods*. Larger models score higher, so don't quote them as benchmarks.
+- Some modules are heavier than others. **Module 09 trains a model** (roughly 10 to 20 minutes on a laptop), and Modules 10 and 11 download and run larger models.
+
+---
+
 ## 🎯 How This Track Works
 
 Every module follows the same pattern:
@@ -59,21 +86,6 @@ Each module contains:
 | [02 · Ask Your Documents](projects/02-ask-your-documents) (RAG with citations, PDF support, evaluation harness) | Modules 04, 05, 06 | ✅ Complete |
 | [03 · Tool-Using Agent](projects/03-tool-using-agent) (sandboxed files, human approval, red-teaming) | Modules 07, 08 | ✅ Complete |
 | [04 · Production LLM API](projects/04-production-llm-api) (auth, rate limits, caching, streaming, metrics) | Modules 03, 11 | ✅ Complete |
-
------- | :-------- | :----: |
-| [Support Ticket Assistant](projects/01-support-ticket-assistant) (beginner) | Modules 02, 03, 04 | ✅ Complete |
-| Chat with Your Documents (RAG with citations) | Modules 04, 05 | ⬜ Planned |
-| RAG Evaluation Harness | Module 06 | ⬜ Planned |
-| Tool-Using Agent | Module 07 | ⬜ Planned |
-| Production LLM API (FastAPI, streaming, caching, cost tracking) | Module 11 | ⬜ Planned |
-
------- | :-------- | :----: |
-| Chat with Your PDF (RAG with citations) | Modules 04, 05 | ⬜ Planned |
-| Structured Extraction Pipeline (documents to validated JSON) | Modules 02, 03 | ⬜ Planned |
-| Prompt & RAG Evaluation Harness | Module 06 | ⬜ Planned |
-| Tool-Using Agent | Module 07 | ⬜ Planned |
-| Text-to-Image Demo | Module 10 | ⬜ Planned |
-| Production LLM API (FastAPI, streaming, caching, cost tracking) | Module 11 | ⬜ Planned |
 
 ---
 
@@ -142,12 +154,27 @@ generative-ai/
 │   ├── README.md
 │   └── cheatsheet.md
 ├── tools/
-│   └── py_to_notebook.py   # builds each notebook from its .py script
+│   ├── py_to_notebook.py   # builds each notebook from its .py script
+│   └── check_notebooks.py  # checks notebooks still match their scripts
+├── GLOSSARY.md             # plain-English definitions of every term
 ├── README.md
-└── requirements.txt
+├── requirements.txt        # everything the track needs
+└── requirements-ci.txt     # the small set the automated checks use
 ```
 
 The `02-intermediate/` modules and further projects are added as each one is completed.
+
+---
+
+## ✅ Automated Checks
+
+A GitHub Actions workflow (`.github/workflows/generative-ai-tests.yml`) runs on every change to this folder. It downloads no models, so it is fast. It checks that:
+
+- every script compiles
+- every notebook is valid **and still matches the script it was generated from** (edit a script, then regenerate its notebook with `python generative-ai/tools/py_to_notebook.py <script>`)
+- all four projects' tests pass
+
+To run the same checks yourself, from the repository root: `python generative-ai/tools/check_notebooks.py`, and `python -m unittest discover -s tests` inside each project folder.
 
 ---
 
