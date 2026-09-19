@@ -1,0 +1,4 @@
+# Keep line endings consistent between Windows and Linux, so commits stop warning about LF vs CRLF
+# and files behave the same in CI.
+generative-ai/** text eol=lf
+*.ipynb text eol=lf

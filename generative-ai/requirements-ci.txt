@@ -1,0 +1,7 @@
+# The small set of packages the automated checks need (see .github/workflows/generative-ai-tests.yml).
+# The project tests use fake models, so they do NOT need torch or transformers.
+numpy>=1.26
+chromadb>=0.5.0
+fastapi>=0.110.0
+httpx>=0.27.0
+pypdf>=4.0.0

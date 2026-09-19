@@ -1,0 +1,41 @@
+name: Generative AI track checks
+
+# Runs when anything in the track changes. None of these steps download a model:
+# the project tests use fake models, so the whole job is fast and free.
+on:
+  push:
+    paths:
+      - "generative-ai/**"
+      - ".github/workflows/generative-ai-tests.yml"
+  pull_request:
+    paths:
+      - "generative-ai/**"
+      - ".github/workflows/generative-ai-tests.yml"
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: generative-ai/requirements-ci.txt
+
+      - name: Install test dependencies
+        run: pip install -r generative-ai/requirements-ci.txt
+
+      - name: Every script and package compiles
+        run: python -m compileall -q generative-ai
+
+      - name: Notebooks are valid and match the scripts they were built from
+        run: python generative-ai/tools/check_notebooks.py
+
+      - name: Project tests
+        run: |
+          for project in generative-ai/projects/*/; do
+            echo "=== $project"
+            (cd "$project" && python -m unittest discover -s tests) || exit 1
+          done

@@ -68,7 +68,13 @@ def parse(text):
     return pip_packages, cells
 
 
-def main(script):
+def is_percent_format(script):
+    """True if the script uses the '# %%' cell markers this tool understands."""
+    return any(line.startswith("# %%") for line in Path(script).read_text(encoding="utf-8").splitlines())
+
+
+def build_notebook(script):
+    """Return (notebook_text, cell_count, output_path) for a script, without writing anything."""
     script = Path(script).resolve()
     repo_root = next(p for p in script.parents if (p / ".git").exists())
     relative = script.with_suffix(".ipynb").relative_to(repo_root).as_posix()
@@ -96,9 +102,13 @@ def main(script):
         "nbformat": 4,
         "nbformat_minor": 5,
     }
-    out = script.with_suffix(".ipynb")
-    out.write_text(json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Wrote {out.relative_to(repo_root)} ({len(cells)} cells)")
+    return json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", len(cells), script.with_suffix(".ipynb")
+
+
+def main(script):
+    text, count, out = build_notebook(script)
+    out.write_text(text, encoding="utf-8")
+    print(f"Wrote {out.name} ({count} cells)")
 
 
 if __name__ == "__main__":

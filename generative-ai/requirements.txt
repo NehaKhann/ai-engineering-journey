@@ -1,6 +1,8 @@
 # Generative AI Track
-# Shares the repository's virtual environment. Install the root requirements first:
-#   pip install -r ../requirements.txt
+# Self-contained: this file lists everything the track needs, so you do NOT have to install the
+# repository's root requirements first (those cover the weekly course and are much heavier).
+#   pip install -r generative-ai/requirements.txt
+# Modules 02 onward use the `dtype=` argument, which needs transformers 4.56 or newer.
 
 # Modules 01 to 08 — core
 transformers>=4.56.0
