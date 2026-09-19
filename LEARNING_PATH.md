@@ -275,17 +275,16 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 06 | Evaluation & LLM-as-Judge | Intermediate | ✅ Complete |
 | 07 | Tool Use & Agents | Intermediate | ✅ Complete |
 | 08 | Guardrails, Safety & Hallucination | Intermediate | ✅ Complete |
-| 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ⬜ Planned |
+| 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ✅ Complete |
 | 10 | Multimodal & Diffusion Models | Intermediate | ⬜ Planned |
 | 11 | Deployment & LLMOps | Intermediate | ⬜ Planned |
 
 **Projects**
 
 - ✅ [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner)
-- Chat with Your Documents (RAG with citations)
-- RAG Evaluation Harness
-- Tool-Using Agent
-- Production LLM API
+- [Ask Your Documents](generative-ai/projects/02-ask-your-documents): RAG with citations and an evaluation harness
+- [Tool-Using Agent](generative-ai/projects/03-tool-using-agent): sandboxed tools and human approval
+- [Production LLM API](generative-ai/projects/04-production-llm-api): auth, rate limiting, caching, streaming
 
 ---
 

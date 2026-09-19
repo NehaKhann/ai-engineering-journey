@@ -47,7 +47,7 @@ Each module contains:
 | [06](02-intermediate/06-evaluation) | Evaluation & LLM-as-Judge | ✅ Complete |
 | [07](02-intermediate/07-tool-use-agents) | Tool Use & Agents | ✅ Complete |
 | [08](02-intermediate/08-guardrails-safety) | Guardrails, Safety & Hallucination | ✅ Complete |
-| 09 | Prompting vs RAG vs Fine-Tuning | ⬜ Planned |
+| [09](02-intermediate/09-prompting-vs-rag-vs-finetuning) | Prompting vs RAG vs Fine-Tuning | ✅ Complete |
 | 10 | Multimodal & Diffusion Models | ⬜ Planned |
 | 11 | Deployment & LLMOps | ⬜ Planned |
 
@@ -55,6 +55,12 @@ Each module contains:
 
 | Project | Builds on | Status |
 | :------ | :-------- | :----: |
+| [01 · Support Ticket Assistant](projects/01-support-ticket-assistant) (beginner) | Modules 02, 03, 04 | ✅ Complete |
+| [02 · Ask Your Documents](projects/02-ask-your-documents) (RAG with citations, PDF support, evaluation harness) | Modules 04, 05, 06 | ⬜ Planned |
+| [03 · Tool-Using Agent](projects/03-tool-using-agent) (sandboxed files, human approval, red-teaming) | Modules 07, 08 | ⬜ Planned |
+| [04 · Production LLM API](projects/04-production-llm-api) (auth, rate limits, caching, streaming, metrics) | Modules 03, 11 | ⬜ Planned |
+
+------ | :-------- | :----: |
 | [Support Ticket Assistant](projects/01-support-ticket-assistant) (beginner) | Modules 02, 03, 04 | ✅ Complete |
 | Chat with Your Documents (RAG with citations) | Modules 04, 05 | ⬜ Planned |
 | RAG Evaluation Harness | Module 06 | ⬜ Planned |
@@ -110,9 +116,13 @@ generative-ai/
 │   │   ├── tool_use_agents.py
 │   │   ├── tool_use_agents.ipynb
 │   │   └── README.md
-│   └── 08-guardrails-safety/
-│       ├── guardrails.py
-│       ├── guardrails.ipynb
+│   ├── 08-guardrails-safety/
+│   │   ├── guardrails.py
+│   │   ├── guardrails.ipynb
+│   │   └── README.md
+│   └── 09-prompting-vs-rag-vs-finetuning/
+│       ├── prompting_rag_finetuning.py
+│       ├── prompting_rag_finetuning.ipynb
 │       └── README.md
 ├── projects/
 │   └── 01-support-ticket-assistant/

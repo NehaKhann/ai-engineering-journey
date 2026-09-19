@@ -148,3 +148,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Red-teaming** | Attack your own system, record results, keep every finding as a regression test. |
 
 [Full explanations →](../02-intermediate/08-guardrails-safety/README.md)
+
+---
+
+## Module 09 — Prompting vs RAG vs Fine-Tuning
+
+| Concept | One-liner |
+|---|---|
+| **The ladder** | Prompting first (cheapest, reversible), RAG for knowledge, fine-tuning for behavior. They combine. |
+| **RAG is for** | Private, fresh, or large facts; citations; per-user permissions. Updates in seconds by re-indexing. |
+| **Fine-tuning is for** | Style, strict output format, a specialized skill, or a smaller cheaper model on a narrow task. |
+| **Why not fine-tune facts** | Slow and costly to update, no citations, can't delete or permission a fact. In our test: 0 of 5 updates vs 4 of 5 for RAG. |
+| **Side effects to test** | General ability, and whether it can still say "I don't know" (ours invented answers to both unanswerable questions). |
+| **Cost shape** | RAG: more tokens per query (156 vs 40 here). Fine-tuning: up-front training, redone on every change. |
+| **LoRA** | Train small adapter matrices instead of all weights (1.7% of parameters here, about two minutes on a CPU). |
+| **RAG prompt sensitivity** | Same retrieval scored 1, 1, 6, 5 out of 12 across four prompts. Test prompts. |
+| **Deciding** | Eval set with reworded, unanswerable, and changed-fact questions. Report uncertainty on small sets. |
+
+[Full explanations →](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md)

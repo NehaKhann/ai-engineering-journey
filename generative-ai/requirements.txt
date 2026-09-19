@@ -2,18 +2,28 @@
 # Shares the repository's virtual environment. Install the root requirements first:
 #   pip install -r ../requirements.txt
 
-# Module 01 — GenAI Landscape
+# Modules 01 to 08 — core
 transformers>=4.56.0
 torch>=2.2.0
 matplotlib>=3.8.0
-
-# Module 03 — LLM APIs (the anthropic package is only needed for the optional hosted-model section)
-anthropic>=1.0.0
-
-# Module 04 — Embeddings & Vector Search
 scikit-learn>=1.3.0
 chromadb>=0.5.0
 
-# Later modules (added when each one is built)
-# python-dotenv   -> API keys from .env
-# fastapi, uvicorn -> serving
+# Module 03 and Module 07 — the anthropic package is only needed for the optional hosted-model sections
+anthropic>=1.0.0
+
+# Module 09 — fine-tuning experiment (LoRA)
+peft>=0.11.0
+
+# Module 10 — multimodal and diffusion
+pillow>=10.0.0
+
+# Module 11 and Project 04 — serving
+fastapi>=0.110.0
+uvicorn>=0.29.0
+httpx>=0.27.0
+
+# Project 02 — reading PDFs
+pypdf>=4.0.0
+
+# Optional: python-dotenv for loading API keys from a .env file

@@ -106,6 +106,17 @@ How to present it in an interview, with the questions it prepares you for, is in
 | How do you handle sensitive data (PII) in an LLM application? | [Q5](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
 | What is red-teaming, and how would you do it for an LLM feature? | [Q6](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
 
+### Module 09 — Prompting vs RAG vs Fine-Tuning
+
+| Question | Answer in |
+|---|---|
+| When would you use prompting, RAG, or fine-tuning? | [Q1](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+| Why is fine-tuning a poor way to add knowledge? | [Q2](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+| When is fine-tuning the right choice? | [Q3](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+| A policy changes tomorrow. How does each approach cope? | [Q4](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+| What are the cost trade-offs between RAG and fine-tuning? | [Q5](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+| How do you decide with data instead of opinion? | [Q6](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
+
 Added as further modules are completed.
 
 ---

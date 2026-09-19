@@ -56,8 +56,11 @@ ai-engineering-journey/
 │   └── week-08-capstone/
 │
 ├── generative-ai/
-│   ├── 01-beginner/
-│   └── interview-prep/
+│   ├── 01-beginner/          # modules 01-04
+│   ├── 02-intermediate/      # modules 05-11
+│   ├── projects/             # hands-on projects
+│   ├── interview-prep/
+│   └── tools/
 │
 ├── projects/
 │   ├── llm-explainer-dashboard/
@@ -169,6 +172,7 @@ A parallel track covering Generative AI from beginner to intermediate, with inte
 | 06 | Evaluation & LLM-as-Judge | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/06-evaluation/evaluation.ipynb) |
 | 07 | Tool Use & Agents | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/07-tool-use-agents/tool_use_agents.ipynb) |
 | 08 | Guardrails, Safety & Hallucination | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/08-guardrails-safety/guardrails.ipynb) |
+| 09 | Prompting vs RAG vs Fine-Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/09-prompting-vs-rag-vs-finetuning/prompting_rag_finetuning.ipynb) |
 
 ---
 
