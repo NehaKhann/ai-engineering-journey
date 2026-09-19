@@ -38,7 +38,7 @@ Each module contains:
 | Module | Topic | Status |
 | :----- | :---- | :----: |
 | [01](01-beginner/01-genai-landscape) | The Generative AI Landscape | ✅ Complete |
-| 02 | Prompt Engineering | ⬜ Planned |
+| [02](01-beginner/02-prompt-engineering) | Prompt Engineering | ✅ Complete |
 | 03 | LLM APIs: Tokens, Streaming, Cost | ⬜ Planned |
 | 04 | Embeddings & Vector Search | ⬜ Planned |
 
@@ -72,14 +72,20 @@ Each module contains:
 ```text
 generative-ai/
 ├── 01-beginner/
-│   └── 01-genai-landscape/
-│       ├── assets/
-│       ├── genai_landscape.py
-│       ├── genai_landscape.ipynb
+│   ├── 01-genai-landscape/
+│   │   ├── assets/
+│   │   ├── genai_landscape.py
+│   │   ├── genai_landscape.ipynb
+│   │   └── README.md
+│   └── 02-prompt-engineering/
+│       ├── prompt_engineering.py
+│       ├── prompt_engineering.ipynb
 │       └── README.md
 ├── interview-prep/
 │   ├── README.md
 │   └── cheatsheet.md
+├── tools/
+│   └── py_to_notebook.py   # builds each notebook from its .py script
 ├── articles/
 ├── README.md
 └── requirements.txt

@@ -21,6 +21,17 @@ For one-line answers, see the [Cheatsheet](cheatsheet.md).
 | Compare GANs, VAEs, and diffusion models. | [Q5](../01-beginner/01-genai-landscape/README.md#-interview-qa) |
 | What is a foundation model? | [Q6](../01-beginner/01-genai-landscape/README.md#-interview-qa) |
 
+### Module 02 — Prompt Engineering
+
+| Question | Answer in |
+|---|---|
+| What is prompt engineering, and why try it before fine-tuning? | [Q1](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+| Explain zero-shot, few-shot, and chain-of-thought prompting. | [Q2](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+| What are system, user, and assistant messages? | [Q3](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+| How do you get reliable structured output such as JSON from an LLM? | [Q4](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+| What is prompt injection and how do you defend against it? | [Q5](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+| How do you know whether one prompt is better than another? | [Q6](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
+
 ---
 
 ## 🟡 Intermediate

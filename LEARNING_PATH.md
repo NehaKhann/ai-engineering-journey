@@ -268,7 +268,7 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | Module | Topic | Level | Status |
 | :----- | :---- | :---- | :----: |
 | 01 | The Generative AI Landscape | Beginner | ✅ Complete |
-| 02 | Prompt Engineering | Beginner | ⬜ Planned |
+| 02 | Prompt Engineering | Beginner | ✅ Complete |
 | 03 | LLM APIs: Tokens, Streaming, Cost | Beginner | ⬜ Planned |
 | 04 | Embeddings & Vector Search | Beginner | ⬜ Planned |
 | 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ⬜ Planned |
