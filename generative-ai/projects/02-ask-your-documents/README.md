@@ -37,7 +37,7 @@ The project also includes something most RAG demos leave out: an **evaluation ha
 │   ├── rag.py               # retrieve, prompt, cite, refuse
 │   └── evaluate.py          # golden-set scoring and failure diagnosis
 ├── sample_docs/             # a fictional company handbook (6 files)
-├── data/golden.json         # 16 answerable and 2 unanswerable questions
+├── data/golden.json         # 24 answerable and 2 unanswerable questions
 └── tests/test_docs_qa.py    # 14 tests, no model needed
 ```
 
@@ -100,7 +100,7 @@ To use your own documents, run `python main.py ingest path\to\your\folder`. **Re
 - **Every chunk carries its source, page, and title.** That is what makes citations possible, and prepending the title to each chunk before embedding is meant to help a chunk that starts mid-document still say what it's about (we did not measure it against leaving the title out).
 - **A similarity threshold refuses before generating.** If nothing retrieved is close enough (best score below 0.2), the system says so without calling the model. That saves a call and prevents a confident answer built on irrelevant text. The value 0.2 was chosen from Module 04's observation that off-topic questions scored under about 0.15 and real ones above about 0.3. It is a starting point, not a tuned value.
 - **Only cited sources are shown.** The answer prints the files the model actually cited. If it cited nothing, the best match is shown instead.
-- **The prompt was chosen by measurement.** Module 09 showed the same retrieval scoring 1, 1, 6, and 5 out of 12 across four prompt wordings on this small model. The prompt used here is the one that worked best there: no example answer (the model copied it), and an instruction to say "I don't know" *only* if no source mentions the answer.
+- **The prompt was chosen by measurement.** Module 09 showed the same retrieval scoring 1, 1, 6, and 5 out of 12 across four prompt wordings on this small model. The prompt used here is the one that worked best there: no example answer (the model copied it), and an instruction to say "I don't know" *only* if no source mentions the answer. **A caution:** Module 09 picked that prompt by scoring it on 12 test questions, and those same 12 appear in this golden set. That is a small leak (choosing something on the data you then report on flatters the result), so the golden set marks those 12 and the report scores them **separately** from 12 questions that were never used to choose anything.
 - **Re-ingesting replaces.** Adding a file deletes that file's old chunks first, so nothing stale lingers.
 
 ### The evaluation harness
@@ -121,16 +121,18 @@ That retrieval-vs-generation split is what tells you where to spend your time.
 
 ## 📊 Results on the Golden Set
 
-`python main.py evaluate` on the sample handbook (16 answerable questions phrased the way a real employee would ask, plus 2 the documents cannot answer):
+`python main.py evaluate` on the sample handbook (24 answerable questions phrased the way a real employee would ask, plus 2 the documents cannot answer. Twelve of the 24 are the questions Module 09 used to choose the prompt; the other 12 were never used for anything):
 
 | | Result |
 |---|---|
-| Retrieval Hit@1 | **81%** |
+| Retrieval Hit@1 | **83%** |
 | Retrieval Hit@3 | **100%** |
-| Retrieval MRR | 0.89 |
-| Answers correct (16 answerable) | **44%** (7 of 16) |
+| Retrieval MRR | 0.90 |
+| Answers correct (24 answerable) | **50%** (12 of 24) |
+| ...on the 12 questions the prompt was chosen on | 5 of 12 (optimistic in principle) |
+| ...on the 12 questions it never saw | **7 of 12** (the honest number) |
 | Wrong because **retrieval** failed | **0** |
-| Wrong because **generation** failed | **9** |
+| Wrong because **generation** failed | **12** |
 | Unanswerable questions correctly declined | 2 of 2 |
 
 Example of the working path, and of a refusal:
@@ -147,22 +149,23 @@ A: I couldn't find that in the documents.
 
 ### What the numbers say
 
-**Retrieval is not the problem. The generator is.** The right chunk was in the top 3 for every single question (Hit@3 100%), so all 9 wrong answers were **generation failures**: the evidence was sitting in the prompt and the small model still got it wrong. The harness's retrieval-versus-generation split is what makes this visible. Without it you might spend days tuning chunk sizes and embeddings, which would not have helped.
+**Retrieval is not the problem. The generator is.** The right chunk was in the top 3 for every single question (Hit@3 100%), so all 12 wrong answers were **generation failures**: the evidence was sitting in the prompt and the small model still got it wrong. The harness's retrieval-versus-generation split is what makes this visible. Without it you might spend days tuning chunk sizes and embeddings, which would not have helped.
 
-The 9 failures fall into recognizable groups:
+The 12 failures fall into recognizable groups:
 
 | Failure | Count | Example |
 |---|---|---|
 | Answered only with a citation | 2 | *"When does my initial salary payment land?"* → `[1]` |
-| Wrongly said "I don't know" | 4 | *"Is plugging in a flash drive allowed?"* → `I don't know.` |
+| Wrongly said "I don't know" | 5 | *"Is plugging in a flash drive allowed?"* → `I don't know.` |
 | Grabbed a neighboring number | 2 | *"What money do I get to set up my work-from-home space?"* → `$50 per month toward internet costs` (the answer is the **$500** stipend, one sentence earlier) |
-| Repeated the chunk instead of answering | 1 | *"How long is the trial period for new hires?"* → the start of the onboarding chunk |
+| Repeated the source text instead of answering | 3 | *"How long is the trial period for new hires?"* → the start of the onboarding chunk |
 
 This matches what Modules 05 and 09 found with the same small model: it is unreliable at reading a passage and pulling out one fact. The fixes are on the generation side: a stronger model (Module 03), a prompt tuned on your own data, or an extractive step that pulls the answer span out of the chunk.
 
 ### Read these numbers with care
 
-- **16 questions is small.** One question is 6 points, so treat the exact percentages as approximate.
+- **The prompt-selection overlap did not visibly inflate the result.** The 12 questions the prompt was chosen on scored 5 of 12, and the 12 it never saw scored 7 of 12. With 12 questions each, that gap is noise, so the honest reading is "about half, with no sign of leakage", not "the fresh questions are easier". The split is there so you can check.
+- **24 questions is still small.** One question is about 4 points, so treat the exact percentages as approximate.
 - **The scorer is crude.** It checks whether an expected string appears in the answer (Module 06 covers better scorers, and their own limits).
 - **The corpus is tiny and clean:** six short documents. Retrieval will not stay this good on thousands of similar documents.
 - **The model is small.** A larger model would likely score much higher on the same retrieved chunks, and would change the picture from "generation is the bottleneck" to something less lopsided.

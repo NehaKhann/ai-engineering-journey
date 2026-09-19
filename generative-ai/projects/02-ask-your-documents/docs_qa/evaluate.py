@@ -29,6 +29,7 @@ def evaluate(store, golden, chat_fn, k=3):
             texts = [hit["text"] for hit in answer.retrieved]
             rank = next((i for i, t in enumerate(texts, 1) if item["evidence"].lower() in t.lower()), None)
             record["answerable"] = True
+            record["prompt_selected_on"] = bool(item.get("used_for_prompt_selection", False))
             record["retrieval_rank"] = rank
             record["correct"] = (not answer.refused) and contains_any(answer.text, item["expected"])
         records.append(record)
@@ -47,9 +48,19 @@ def summarize(records, k):
         "answer_accuracy": sum(r["correct"] for r in answerable) / len(answerable),
         "wrong_because_retrieval": sum(r["retrieval_rank"] is None for r in wrong),
         "wrong_because_generation": sum(r["retrieval_rank"] is not None for r in wrong),
+        "by_group": {
+            # Questions the prompt was chosen on are optimistic; the never-seen group is the honest estimate.
+            "prompt_selected_on": _group(answerable, True),
+            "never_seen": _group(answerable, False),
+        },
         "unanswerable": len(unanswerable),
         "correctly_declined": sum(r["correct"] for r in unanswerable),
     }
+
+
+def _group(answerable, selected):
+    members = [r for r in answerable if r.get("prompt_selected_on", False) == selected]
+    return {"correct": sum(r["correct"] for r in members), "total": len(members)}
 
 
 def print_report(records, summary, k):
@@ -57,9 +68,13 @@ def print_report(records, summary, k):
     print(f"Answers     {summary['answer_accuracy']:.0%} correct on {summary['questions']} answerable questions")
     print(f"            of the wrong ones, {summary['wrong_because_retrieval']} were retrieval failures "
           f"and {summary['wrong_because_generation']} were generation failures")
+    seen, fresh = summary["by_group"]["prompt_selected_on"], summary["by_group"]["never_seen"]
+    if seen["total"] and fresh["total"]:
+        print(f"            {seen['correct']}/{seen['total']} on questions the prompt was chosen on (optimistic), "
+              f"{fresh['correct']}/{fresh['total']} on questions it never saw (the honest number)")
     print(f"Unanswerable {summary['correctly_declined']}/{summary['unanswerable']} correctly declined\n")
     for r in records:
         if not r["correct"]:
-            why = "declined an unanswerable question wrongly answered" if not r["answerable"] else (
+            why = "answered a question the documents cannot answer" if not r["answerable"] else (
                 "retrieval missed it" if r["retrieval_rank"] is None else "retrieved, but the answer was wrong")
             print(f"  WRONG ({why})\n    Q: {r['question']}\n    A: {r['answer'][:110]}")

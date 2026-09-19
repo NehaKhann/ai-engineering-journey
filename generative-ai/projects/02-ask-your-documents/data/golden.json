@@ -6,7 +6,8 @@
       "20 days",
       "20 paid",
       "twenty"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "If I don't use all my holidays, how many roll over?",
@@ -16,7 +17,8 @@
       "5 days",
       "up to 5",
       "five"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "Do I need sign-off before buying something costing more than seventy-five dollars?",
@@ -24,7 +26,8 @@
     "expected": [
       "$75",
       "approval"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "What's the nightly cap on accommodation when I travel?",
@@ -32,7 +35,8 @@
     "expected": [
       "$180",
       "180"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "How many office-free days per week are allowed?",
@@ -41,14 +45,16 @@
       "3 days",
       "three days",
       "up to 3"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "What money do I get to set up my work-from-home space?",
     "evidence": "stipend of $500",
     "expected": [
       "$500"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "Who do I tell if my laptop goes missing, and how fast?",
@@ -57,14 +63,16 @@
       "1 hour",
       "one hour",
       "an hour"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "How many characters must a password contain at minimum?",
     "evidence": "at least 14 characters",
     "expected": [
       "14"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "What's the annual amount for courses and books?",
@@ -73,7 +81,8 @@
       "$1,200",
       "1,200",
       "1200"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "How much do I earn for recommending a friend who gets hired?",
@@ -82,7 +91,8 @@
       "$2,000",
       "2,000",
       "2000"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "When does my initial salary payment land?",
@@ -90,7 +100,8 @@
     "expected": [
       "25th",
       "25"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "How many weeks off does a new mother get?",
@@ -99,7 +110,8 @@
       "16 weeks",
       "16-week",
       "sixteen"
-    ]
+    ],
+    "used_for_prompt_selection": true
   },
   {
     "question": "Is plugging in a flash drive allowed?",
@@ -110,14 +122,16 @@
       "prohibited",
       "cannot",
       "must not"
-    ]
+    ],
+    "used_for_prompt_selection": false
   },
   {
     "question": "What is the deadline for the yearly security course?",
     "evidence": "March 31",
     "expected": [
       "march 31"
-    ]
+    ],
+    "used_for_prompt_selection": false
   },
   {
     "question": "How long is the trial period for new hires?",
@@ -125,7 +139,8 @@
     "expected": [
       "90 days",
       "90-day"
-    ]
+    ],
+    "used_for_prompt_selection": false
   },
   {
     "question": "What share of my family's health premiums does the company cover?",
@@ -133,7 +148,82 @@
     "expected": [
       "70%",
       "70 percent"
-    ]
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "How many days can I stay home sick each year?",
+    "evidence": "Sick leave is 10 days",
+    "expected": [
+      "10 days",
+      "ten days"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "What's the most the company reimburses for food on a business trip per day?",
+    "evidence": "meals are reimbursed up to $60",
+    "expected": [
+      "$60",
+      "60 dollars"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "How long do I have to file my expense claims?",
+    "evidence": "within 30 days",
+    "expected": [
+      "30 days",
+      "thirty days"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "Do I have to use a VPN at a coffee shop?",
+    "evidence": "A VPN is required whenever you use public wifi",
+    "expected": [
+      "yes",
+      "required",
+      "must"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "How does the company match retirement savings?",
+    "evidence": "matches 401(k) contributions up to 4%",
+    "expected": [
+      "4%",
+      "four percent"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "How long does it take for stock options to fully vest?",
+    "evidence": "vest over 4 years",
+    "expected": [
+      "4 years",
+      "four years"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "What hours do I need to be reachable when working remotely?",
+    "evidence": "10:00 to 15:00",
+    "expected": [
+      "10:00",
+      "15:00",
+      "10 to 15"
+    ],
+    "used_for_prompt_selection": false
+  },
+  {
+    "question": "When should my manager request my GitHub access?",
+    "evidence": "at least 5 days before your start date",
+    "expected": [
+      "5 days",
+      "five days"
+    ],
+    "used_for_prompt_selection": false
   },
   {
     "question": "Who is the CEO of Northwind Labs?",

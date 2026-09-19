@@ -180,6 +180,17 @@ class EvaluateTests(unittest.TestCase):
         self.assertEqual(summary["correctly_declined"], 1)
         self.assertAlmostEqual(summary["answer_accuracy"], 1 / 3)
 
+    def test_reports_questions_the_prompt_was_chosen_on_separately(self):
+        store = new_store()
+        store.add_records([VACATION])
+        golden = [
+            {"question": "how many days of paid vacation", "evidence": "twenty days", "expected": ["twenty"], "used_for_prompt_selection": True},
+            {"question": "carry over unused days", "evidence": "five unused days", "expected": ["nope"], "used_for_prompt_selection": False},
+        ]
+        _, summary = evaluate(store, golden, lambda messages: "Twenty days. [1]", k=1)
+        self.assertEqual(summary["by_group"]["prompt_selected_on"], {"correct": 1, "total": 1})
+        self.assertEqual(summary["by_group"]["never_seen"], {"correct": 0, "total": 1})
+
 
 if __name__ == "__main__":
     unittest.main()
