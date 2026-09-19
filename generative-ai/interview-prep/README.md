@@ -73,6 +73,17 @@ How to present it in an interview, with the questions it prepares you for, is in
 | Retrieval is missing relevant chunks. How do you improve it? | [Q5](../02-intermediate/05-rag/README.md#-interview-qa) |
 | Why not just paste all the documents into a long context window? | [Q6](../02-intermediate/05-rag/README.md#-interview-qa) |
 
+### Module 06 — Evaluation & LLM-as-Judge
+
+| Question | Answer in |
+|---|---|
+| How would you evaluate a RAG system? | [Q1](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+| Explain Hit@k, recall@k, MRR, and nDCG. When do you use each? | [Q2](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+| What is LLM-as-a-judge, and what are its pitfalls? | [Q3](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+| Your new prompt scores 3 points higher on your eval set. How do you know it's better? | [Q4](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+| How do you build a good golden set? | [Q5](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+| What is the difference between offline and online evaluation? | [Q6](../02-intermediate/06-evaluation/README.md#-interview-qa) |
+
 Added as further modules are completed.
 
 ---

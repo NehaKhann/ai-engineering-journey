@@ -272,7 +272,7 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 03 | LLM APIs: Tokens, Streaming, Cost | Beginner | ✅ Complete |
 | 04 | Embeddings & Vector Search | Beginner | ✅ Complete |
 | 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ✅ Complete |
-| 06 | Evaluation & LLM-as-Judge | Intermediate | ⬜ Planned |
+| 06 | Evaluation & LLM-as-Judge | Intermediate | ✅ Complete |
 | 07 | Tool Use & Agents | Intermediate | ⬜ Planned |
 | 08 | Guardrails, Safety & Hallucination | Intermediate | ⬜ Planned |
 | 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ⬜ Planned |

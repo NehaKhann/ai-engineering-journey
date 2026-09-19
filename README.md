@@ -166,6 +166,7 @@ A parallel track covering Generative AI from beginner to intermediate, with inte
 | 04 | Embeddings & Vector Search | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/04-embeddings-vector-search/embeddings_vector_search.ipynb) |
 | Project | [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner project, runs from the command line) | |
 | 05 | Retrieval-Augmented Generation (RAG) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/05-rag/rag.ipynb) |
+| 06 | Evaluation & LLM-as-Judge | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/06-evaluation/evaluation.ipynb) |
 
 ---
 

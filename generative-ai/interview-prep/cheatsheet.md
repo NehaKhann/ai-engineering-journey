@@ -93,3 +93,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **RAG vs long context** | Long context costs per question and buries facts. RAG is cheaper, fresher, and can filter by permission. |
 
 [Full explanations →](../02-intermediate/05-rag/README.md)
+
+---
+
+## Module 06 — Evaluation & LLM-as-Judge
+
+| Concept | One-liner |
+|---|---|
+| **Golden set** | Questions paired with known-correct answers. Phrase them like real users, include unanswerable ones. |
+| **Evaluate separately** | Retrieval (Hit@k, recall@k, MRR, no LLM) and generation (correctness, faithfulness). |
+| **Hit@k / recall@k / MRR / nDCG** | Any relevant in top k / share of all relevant in top k / mean of 1/rank of first hit / graded ranking quality. |
+| **Faithfulness vs correctness** | Supported by the retrieved context vs true. An answer can be faithful to a wrong document. |
+| **Bootstrap interval** | Resample the questions to see if a gap could be noise. If the interval includes 0, no proven difference. |
+| **String metrics** | Cheap, but exact match and F1 punish correct paraphrases. |
+| **LLM judge** | Handles open-ended answers. Must be validated against human labels. |
+| **Judge biases** | Position, verbosity, self-preference, inconsistency. Test for each. |
+| **Offline vs online** | Fixed test set before release vs real usage signals after. Failures found online become new offline tests. |
+
+[Full explanations →](../02-intermediate/06-evaluation/README.md)

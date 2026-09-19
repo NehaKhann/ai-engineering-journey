@@ -44,7 +44,7 @@ Each module contains:
 | Module | Topic | Status |
 | :----- | :---- | :----: |
 | [05](02-intermediate/05-rag) | Retrieval-Augmented Generation (RAG) | ✅ Complete |
-| 06 | Evaluation & LLM-as-Judge | ⬜ Planned |
+| [06](02-intermediate/06-evaluation) | Evaluation & LLM-as-Judge | ✅ Complete |
 | 07 | Tool Use & Agents | ⬜ Planned |
 | 08 | Guardrails, Safety & Hallucination | ⬜ Planned |
 | 09 | Prompting vs RAG vs Fine-Tuning | ⬜ Planned |
@@ -96,10 +96,15 @@ generative-ai/
 │       ├── embeddings_vector_search.ipynb
 │       └── README.md
 ├── 02-intermediate/
-│   └── 05-rag/
+│   ├── 05-rag/
+│   │   ├── assets/
+│   │   ├── rag.py
+│   │   ├── rag.ipynb
+│   │   └── README.md
+│   └── 06-evaluation/
 │       ├── assets/
-│       ├── rag.py
-│       ├── rag.ipynb
+│       ├── evaluation.py
+│       ├── evaluation.ipynb
 │       └── README.md
 ├── projects/
 │   └── 01-support-ticket-assistant/
@@ -154,6 +159,7 @@ Modules run locally on open models by default, so no API key is needed. Modules 
 | Module 03 — LLM APIs | [Week 1, Day 5](../weeks/week-01-llm-foundations/day-05-context-window) |
 | Module 04 — Embeddings | [Week 1, Day 2](../weeks/week-01-llm-foundations/day-02-transformers) |
 | Module 05 — RAG | Week 6 — RAG *(planned)*, and [Week 2](../weeks/week-02-fine-tuning-fundamentals) for the fine-tuning alternative |
+| Module 06 — Evaluation | [Week 2, Day 5](../weeks/week-02-fine-tuning-fundamentals/day-05-model-evaluation), Week 9 *(planned)* |
 | Module 07 — Agents | Week 8 — AI Agents & Tool Use *(planned)* |
 | Module 09 — Prompting vs RAG vs Fine-Tuning | [Weeks 2–3](../weeks) |
 | Module 11 — Deployment | Week 7 — Local LLMs & Deployment *(planned)* |
