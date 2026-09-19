@@ -52,6 +52,7 @@ ai-engineering-learning-journey/
 │   ├── week-06-rag/
 │   ├── week-07-local-llms/
 │   └── week-08-capstone/
+├── generative-ai/
 ├── projects/
 ├── README.md
 ├── LEARNING_PATH.md
@@ -255,6 +256,37 @@ Build a complete production-grade AI system combining:
 - RAG
 - AI Agents
 - Local Deployment
+
+---
+
+# 🎨 Generative AI Track
+
+A parallel track to the weekly curriculum. The weeks go **deep** on one topic at a time; this track goes **wide** across Generative AI, with interview preparation, mini projects, and an article for every module.
+
+➡️ **[Open the Generative AI Track](generative-ai/README.md)**
+
+| Module | Topic | Level | Status |
+| :----- | :---- | :---- | :----: |
+| 01 | The Generative AI Landscape | Beginner | ✅ Complete |
+| 02 | Prompt Engineering | Beginner | ⬜ Planned |
+| 03 | LLM APIs: Tokens, Streaming, Cost | Beginner | ⬜ Planned |
+| 04 | Embeddings & Vector Search | Beginner | ⬜ Planned |
+| 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ⬜ Planned |
+| 06 | Evaluation & LLM-as-Judge | Intermediate | ⬜ Planned |
+| 07 | Tool Use & Agents | Intermediate | ⬜ Planned |
+| 08 | Guardrails, Safety & Hallucination | Intermediate | ⬜ Planned |
+| 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ⬜ Planned |
+| 10 | Multimodal & Diffusion Models | Intermediate | ⬜ Planned |
+| 11 | Deployment & LLMOps | Intermediate | ⬜ Planned |
+
+**Mini Projects**
+
+- Chat with Your PDF (RAG with citations)
+- Structured Extraction Pipeline
+- Prompt & RAG Evaluation Harness
+- Tool-Using Agent
+- Text-to-Image Demo
+- Production LLM API
 
 ---
 

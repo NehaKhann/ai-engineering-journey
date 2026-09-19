@@ -1,0 +1,129 @@
+# 🎨 Generative AI Track
+
+A hands-on track that takes you from **beginner to intermediate Generative AI**, built for two goals: knowing the concepts well enough to explain them in an interview, and having built the things you're asked about.
+
+It is part of the [AI Engineering Journey](../README.md). The weekly curriculum in [`weeks/`](../weeks) goes deep on one topic at a time. This track goes **wide**, covering the full GenAI landscape with interview preparation built into every module.
+
+---
+
+## 🎯 How This Track Works
+
+Every module follows the same pattern:
+
+```text
+Learn the concept
+        ↓
+Run and modify the code
+        ↓
+Practice the interview questions
+        ↓
+Build a mini project
+        ↓
+Write the article
+```
+
+Each module contains:
+
+- 📖 A concept README explaining the idea in plain language
+- 💻 A runnable `.py` script and a matching `.ipynb` notebook
+- 🎤 An **Interview Q&A** section: short answer, deeper answer, and the follow-ups interviewers ask
+- ✍️ A short article you can publish
+
+---
+
+## 📈 Progress
+
+### 🟢 Beginner
+
+| Module | Topic | Status |
+| :----- | :---- | :----: |
+| [01](01-beginner/01-genai-landscape) | The Generative AI Landscape | ✅ Complete |
+| 02 | Prompt Engineering | ⬜ Planned |
+| 03 | LLM APIs: Tokens, Streaming, Cost | ⬜ Planned |
+| 04 | Embeddings & Vector Search | ⬜ Planned |
+
+### 🟡 Intermediate
+
+| Module | Topic | Status |
+| :----- | :---- | :----: |
+| 05 | Retrieval-Augmented Generation (RAG) | ⬜ Planned |
+| 06 | Evaluation & LLM-as-Judge | ⬜ Planned |
+| 07 | Tool Use & Agents | ⬜ Planned |
+| 08 | Guardrails, Safety & Hallucination | ⬜ Planned |
+| 09 | Prompting vs RAG vs Fine-Tuning | ⬜ Planned |
+| 10 | Multimodal & Diffusion Models | ⬜ Planned |
+| 11 | Deployment & LLMOps | ⬜ Planned |
+
+### 🏆 Mini Projects
+
+| Project | Builds on | Status |
+| :------ | :-------- | :----: |
+| Chat with Your PDF (RAG with citations) | Modules 04, 05 | ⬜ Planned |
+| Structured Extraction Pipeline (documents to validated JSON) | Modules 02, 03 | ⬜ Planned |
+| Prompt & RAG Evaluation Harness | Module 06 | ⬜ Planned |
+| Tool-Using Agent | Module 07 | ⬜ Planned |
+| Text-to-Image Demo | Module 10 | ⬜ Planned |
+| Production LLM API (FastAPI, streaming, caching, cost tracking) | Module 11 | ⬜ Planned |
+
+---
+
+## 📂 Structure
+
+```text
+generative-ai/
+├── 01-beginner/
+│   └── 01-genai-landscape/
+│       ├── assets/
+│       ├── genai_landscape.py
+│       ├── genai_landscape.ipynb
+│       └── README.md
+├── interview-prep/
+│   ├── README.md
+│   └── cheatsheet.md
+├── articles/
+├── README.md
+└── requirements.txt
+```
+
+New modules, `02-intermediate/`, and `projects/` are added as each one is completed.
+
+---
+
+## 🎤 Interview Prep
+
+Interview material lives inside each module, so you learn a topic and practice its questions together. [`interview-prep/`](interview-prep) collects it in one place:
+
+- **[Cheatsheet](interview-prep/cheatsheet.md)**: one-line answers for quick revision
+- **[Question index](interview-prep/README.md)**: every question, linked to the module that answers it
+
+---
+
+## ⚙️ Getting Started
+
+The track shares the repository's virtual environment.
+
+```powershell
+# From repository root
+venv\Scripts\activate
+
+pip install -r generative-ai\requirements.txt
+```
+
+Modules run locally on open models by default, so no API key is needed. Modules that need a hosted API (such as function calling) say so at the top of their README. Keep keys in a `.env` file, which is already gitignored.
+
+---
+
+## 🔗 How It Connects to the Weekly Curriculum
+
+| This track | Goes deeper in |
+|---|---|
+| Module 01 — GenAI Landscape | [Week 1 — LLM Foundations](../weeks/week-01-llm-foundations) |
+| Module 02 — Prompt Engineering | [Week 2, Day 1](../weeks/week-02-fine-tuning-fundamentals/day-01-prompt-engineering) |
+| Module 05 — RAG | Week 6 — RAG *(planned)* |
+| Module 07 — Agents | Week 8 — AI Agents & Tool Use *(planned)* |
+| Module 09 — Prompting vs RAG vs Fine-Tuning | [Weeks 2–3](../weeks) |
+| Module 11 — Deployment | Week 7 — Local LLMs & Deployment *(planned)* |
+
+---
+
+⭐ This track grows as I learn. Feedback and suggestions are welcome.

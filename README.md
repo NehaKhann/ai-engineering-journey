@@ -21,6 +21,7 @@ This repository covers topics including:
 - Preference Optimization (DPO & GRPO)
 - Retrieval-Augmented Generation (RAG)
 - Document AI & OCR
+- Generative AI Concepts & Interview Preparation
 - Production-ready AI Projects
 
 ---
@@ -31,6 +32,10 @@ The complete learning roadmap is available here:
 
 ➡️ **[AI Engineering Curriculum](LEARNING_PATH.md)**
 
+Looking for interview preparation and breadth across Generative AI? Follow the parallel track:
+
+➡️ **[Generative AI Track](generative-ai/README.md)**: beginner to intermediate concepts, hands-on code, mini projects, and interview Q&A.
+
 ---
 
 ## 📂 Repository Structure
@@ -39,7 +44,6 @@ The complete learning roadmap is available here:
 ai-engineering-journey/
 
 ├── prerequisites/
-│   └── neural-networks/
 │
 ├── weeks/
 │   ├── week-01-llm-foundations/
@@ -51,12 +55,18 @@ ai-engineering-journey/
 │   ├── week-07-document-ai/
 │   └── week-08-capstone/
 │
+├── generative-ai/
+│   ├── 01-beginner/
+│   ├── interview-prep/
+│   └── articles/
+│
 ├── projects/
 │   ├── llm-explainer-dashboard/
-│   └── custom_assistant/
+│   ├── cybersecurity-assistant/
+│   └── efficient_assistant/
 │
 ├── README.md
-├── CURRICULUM.md
+├── LEARNING_PATH.md
 └── requirements.txt
 ```
 
@@ -142,6 +152,16 @@ Learn the foundations that power every modern AI model.
 |---------|-------|----------|
 | Bonus | LoRA Training on a Real, Larger Dataset (fixes Day 2's catastrophic forgetting) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/bonus-lora-large-dataset/lora_large_dataset.ipynb) |
 | Bonus | LoRA vs. DoRA at Scale (does DoRA's advantage show up on 1,200+ real examples?) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/weeks/week-03-efficient-fine-tuning/bonus-lora-vs-dora-at-scale/lora_vs_dora_at_scale.ipynb) |
+
+---
+
+## 🎨 Generative AI Track
+
+A parallel track covering Generative AI from beginner to intermediate, with interview Q&A in every module. See the [track overview](generative-ai/README.md) for the full roadmap.
+
+| Module | Topic | Notebook |
+|---------|-------|----------|
+| 01 | The Generative AI Landscape | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/01-genai-landscape/genai_landscape.ipynb) |
 
 ---
 
