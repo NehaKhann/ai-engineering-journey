@@ -38,3 +38,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Test prompts** | Run variants on a labeled set and compare a metric. Re-run when the model changes. |
 
 [Full explanations →](../01-beginner/02-prompt-engineering/README.md)
+
+---
+
+## Module 03 — LLM APIs
+
+| Concept | One-liner |
+|---|---|
+| **Token** | The chunk of text a model reads and writes. Cost, speed, and context limits are all in tokens. |
+| **Stateless API** | The model remembers nothing between calls. You re-send the whole conversation each turn. |
+| **Cost formula** | `input × input price + output × output price`, quoted per million tokens. Output costs more. |
+| **Why long chats are costly** | History is re-sent every turn, so total input grows roughly with the square of the turns. |
+| **Cost levers** | Shorter prompts, trim or summarize history, cap `max_tokens`, cache prefixes, batch, cheaper model. |
+| **Streaming** | Send tokens as generated. Same total time, far lower time to first token. |
+| **Retry policy** | Retry 429, 5xx, timeouts with exponential backoff plus jitter. Never retry 400, 401, 404. |
+| **`stop_reason`** | Check it. `max_tokens` means the reply was cut off. |
+| **Hosted vs self-hosted** | Hosted: best quality, easy start. Self-hosted: privacy, fixed cost at high volume, full control. |
+
+[Full explanations →](../01-beginner/03-llm-apis/README.md)

@@ -32,6 +32,17 @@ For one-line answers, see the [Cheatsheet](cheatsheet.md).
 | What is prompt injection and how do you defend against it? | [Q5](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
 | How do you know whether one prompt is better than another? | [Q6](../01-beginner/02-prompt-engineering/README.md#-interview-qa) |
 
+### Module 03 — LLM APIs
+
+| Question | Answer in |
+|---|---|
+| What is a token, and why does it matter to an application developer? | [Q1](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+| Why does a chatbot get more expensive as the conversation gets longer? | [Q2](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+| How would you estimate and reduce the cost of an LLM feature? | [Q3](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+| Why stream responses, and what does it change? | [Q4](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+| How do you handle rate limits and transient failures? | [Q5](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+| When would you use a hosted API instead of a self-hosted open model? | [Q6](../01-beginner/03-llm-apis/README.md#-interview-qa) |
+
 ---
 
 ## 🟡 Intermediate

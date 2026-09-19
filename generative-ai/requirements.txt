@@ -3,9 +3,12 @@
 #   pip install -r ../requirements.txt
 
 # Module 01 — GenAI Landscape
-transformers>=4.40.0
+transformers>=4.56.0
 torch>=2.2.0
 matplotlib>=3.8.0
+
+# Module 03 — LLM APIs (the anthropic package is only needed for the optional hosted-model section)
+anthropic>=1.0.0
 
 # Later modules (added when each one is built)
 # python-dotenv   -> API keys from .env
