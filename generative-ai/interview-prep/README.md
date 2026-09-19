@@ -62,7 +62,18 @@ How to present it in an interview, with the questions it prepares you for, is in
 
 ## 🟡 Intermediate
 
-Added as modules are completed.
+### Module 05 — Retrieval-Augmented Generation (RAG)
+
+| Question | Answer in |
+|---|---|
+| What is RAG, and why use it instead of fine-tuning? | [Q1](../02-intermediate/05-rag/README.md#-interview-qa) |
+| Walk me through a RAG pipeline, and tell me how you would debug a wrong answer. | [Q2](../02-intermediate/05-rag/README.md#-interview-qa) |
+| How do you choose chunk size and overlap? | [Q3](../02-intermediate/05-rag/README.md#-interview-qa) |
+| How do you reduce hallucination in a RAG system? | [Q4](../02-intermediate/05-rag/README.md#-interview-qa) |
+| Retrieval is missing relevant chunks. How do you improve it? | [Q5](../02-intermediate/05-rag/README.md#-interview-qa) |
+| Why not just paste all the documents into a long context window? | [Q6](../02-intermediate/05-rag/README.md#-interview-qa) |
+
+Added as further modules are completed.
 
 ---
 

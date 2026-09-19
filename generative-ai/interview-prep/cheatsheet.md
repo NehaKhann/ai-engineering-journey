@@ -75,3 +75,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Switching models** | Re-embed everything. Vectors from different models are not comparable. |
 
 [Full explanations →](../01-beginner/04-embeddings-vector-search/README.md)
+
+---
+
+## Module 05 — RAG
+
+| Concept | One-liner |
+|---|---|
+| **RAG** | Retrieve relevant chunks, put them in the prompt, generate a grounded answer with citations. |
+| **RAG vs fine-tuning** | RAG adds facts (fresh, citable, permissioned). Fine-tuning changes behavior and style. |
+| **Pipeline** | Offline: chunk, embed, index. Online: embed query, retrieve top-k, build prompt, generate. |
+| **Debugging** | Right chunk retrieved? No: retrieval failure. Yes but bad answer: generation failure. Measure separately. |
+| **Chunk size** | Smallest chunks that keep a fact intact. Big chunks cost tokens and dilute matches. Add overlap. |
+| **Improve retrieval** | Hybrid search, reranker, query rewriting, metadata filters, better embeddings, tune `k`. |
+| **Hallucination controls** | Good retrieval, "answer only from sources", citations, similarity threshold, groundedness checks. |
+| **"I don't know" trade-off** | Stops invented answers but can cause wrongful refusals. Measure both. |
+| **RAG vs long context** | Long context costs per question and buries facts. RAG is cheaper, fresher, and can filter by permission. |
+
+[Full explanations →](../02-intermediate/05-rag/README.md)

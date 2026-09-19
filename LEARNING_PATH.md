@@ -271,7 +271,7 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 02 | Prompt Engineering | Beginner | ✅ Complete |
 | 03 | LLM APIs: Tokens, Streaming, Cost | Beginner | ✅ Complete |
 | 04 | Embeddings & Vector Search | Beginner | ✅ Complete |
-| 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ⬜ Planned |
+| 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ✅ Complete |
 | 06 | Evaluation & LLM-as-Judge | Intermediate | ⬜ Planned |
 | 07 | Tool Use & Agents | Intermediate | ⬜ Planned |
 | 08 | Guardrails, Safety & Hallucination | Intermediate | ⬜ Planned |
