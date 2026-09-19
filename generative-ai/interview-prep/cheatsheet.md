@@ -184,3 +184,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Evaluating image models** | FID (distribution quality), CLIP score (prompt match, but CLIP is weak at counting and layout), plus human evaluation. |
 
 [Full explanations →](../02-intermediate/10-multimodal-diffusion/README.md)
+
+---
+
+## Module 11 — Deployment & LLMOps
+
+| Concept | One-liner |
+|---|---|
+| **Prefill vs decode** | Prefill reads the prompt in one pass (sets time to first token, grows with prompt length). Decode makes one token at a time. |
+| **Long prompts hurt** | Mostly time to first token: 800 tokens took about 1.9 s vs 0.2 s for 50 (per-token speed barely changed). |
+| **Batching** | Throughput up (5.7x at batch 8), but each request waits longer (about 1.4x). Continuous batching (vLLM) gets most of the gain. |
+| **Exact cache** | Safe and effective when queries repeat. Add the tenant to the key, add a TTL, skip personalized or fresh-data requests. |
+| **Semantic cache** | Similarity is not identical meaning: it served more wrong answers than right ones in our test. High threshold, low-stakes only. |
+| **Quantization** | Smaller (3.6x) and faster (1.7x) but a quality cost (loss 2.8 to 4.7 here). Measure on your task. Better methods lose less. |
+| **Percentiles** | Alert on p95/p99, not the mean: the average hid a 1.6 s miss behind 0 ms hits. |
+| **What to log** | Request ID, latency, tokens, cost, cache hit, error, refusal. Never secrets. |
+| **API vs self-host** | Start with an API, measure, then compute break-even including engineering time. |
+
+[Full explanations →](../02-intermediate/11-deployment-llmops/README.md)

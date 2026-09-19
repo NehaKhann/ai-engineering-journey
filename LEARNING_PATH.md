@@ -277,7 +277,7 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 08 | Guardrails, Safety & Hallucination | Intermediate | ✅ Complete |
 | 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ✅ Complete |
 | 10 | Multimodal & Diffusion Models | Intermediate | ✅ Complete |
-| 11 | Deployment & LLMOps | Intermediate | ⬜ Planned |
+| 11 | Deployment & LLMOps | Intermediate | ✅ Complete |
 
 **Projects**
 

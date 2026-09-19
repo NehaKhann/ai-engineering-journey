@@ -128,10 +128,20 @@ How to present it in an interview, with the questions it prepares you for, is in
 | How does a text prompt control the image in a text-to-image model? | [Q5](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
 | How do you evaluate a generative image model? | [Q6](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
 
-Added as further modules are completed.
+### Module 11 — Deployment & LLMOps
+
+| Question | Answer in |
+|---|---|
+| What are prefill and decode, and why does it matter? | [Q1](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
+| What is batching, and what is the trade-off? | [Q2](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
+| How would you cache LLM responses, and what can go wrong? | [Q3](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
+| What is quantization, and what are its trade-offs? | [Q4](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
+| What would you monitor for an LLM service in production? | [Q5](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
+| How would you decide between an API and hosting a model yourself? | [Q6](../02-intermediate/11-deployment-llmops/README.md#-interview-qa) |
 
 ---
 
 ## 🧭 System Design Questions
 
-Open-ended design questions such as *"Design a chatbot over 10,000 internal documents"* are added after the RAG and deployment modules, since they draw on both.
+Open-ended design questions such as *"Design a chatbot over 10,000 internal documents"* combine the modules. Use the [Ask Your Documents](../projects/02-ask-your-documents/README.md) and [Production LLM API](../projects/04-production-llm-api/README.md) projects as worked examples: their READMEs list the design decisions and the interview questions they prepare you for.
+
