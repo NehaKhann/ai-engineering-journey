@@ -130,3 +130,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Testing agents** | Scripted fake model for the loop, then a scored task set for answer, tool choice, steps, and cost. |
 
 [Full explanations →](../02-intermediate/07-tool-use-agents/README.md)
+
+---
+
+## Module 08 — Guardrails, Safety & Hallucination
+
+| Concept | One-liner |
+|---|---|
+| **Guardrail** | A check around the model. Every one is a classifier with false positives and false negatives. |
+| **Layers** | Input (PII, injection), model/tools (least privilege), output (groundedness, format, safety filters). |
+| **PII redaction** | Regex plus checksums for well-formed data. Misses obfuscated and free-text data, so add NER. Redact before the call and before logging. |
+| **Direct vs indirect injection** | Typed by the user vs hidden in content the model reads. Indirect is the dangerous one. |
+| **Injection detectors** | Rules: precise but brittle. Embeddings: catch paraphrases but need a tuned threshold. Score long documents per sentence. |
+| **Hallucination check** | NLI (does the source entail the claim?) beats word overlap and embeddings, which miss wrong numbers. Only checks against the sources. |
+| **Threshold choice** | Set by the cost of each error type in your application. Compare detectors with AUC. |
+| **Baseline first** | Measure the attack success rate without the defense. A defense with cost and no measured benefit isn't free. |
+| **Red-teaming** | Attack your own system, record results, keep every finding as a regression test. |
+
+[Full explanations →](../02-intermediate/08-guardrails-safety/README.md)

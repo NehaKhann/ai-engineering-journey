@@ -95,6 +95,17 @@ How to present it in an interview, with the questions it prepares you for, is in
 | What are the security risks of agents, and how do you mitigate them? | [Q5](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
 | How do you evaluate an agent, and why are agents unreliable? | [Q6](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
 
+### Module 08 — Guardrails, Safety & Hallucination
+
+| Question | Answer in |
+|---|---|
+| What guardrails would you put around an LLM application? | [Q1](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+| What is prompt injection, and how do you defend against it? | [Q2](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+| How do you detect hallucinations in a RAG system? | [Q3](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+| Every guardrail has false positives and false negatives. How do you choose the balance? | [Q4](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+| How do you handle sensitive data (PII) in an LLM application? | [Q5](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+| What is red-teaming, and how would you do it for an LLM feature? | [Q6](../02-intermediate/08-guardrails-safety/README.md#-interview-qa) |
+
 Added as further modules are completed.
 
 ---

@@ -46,7 +46,7 @@ Each module contains:
 | [05](02-intermediate/05-rag) | Retrieval-Augmented Generation (RAG) | ✅ Complete |
 | [06](02-intermediate/06-evaluation) | Evaluation & LLM-as-Judge | ✅ Complete |
 | [07](02-intermediate/07-tool-use-agents) | Tool Use & Agents | ✅ Complete |
-| 08 | Guardrails, Safety & Hallucination | ⬜ Planned |
+| [08](02-intermediate/08-guardrails-safety) | Guardrails, Safety & Hallucination | ✅ Complete |
 | 09 | Prompting vs RAG vs Fine-Tuning | ⬜ Planned |
 | 10 | Multimodal & Diffusion Models | ⬜ Planned |
 | 11 | Deployment & LLMOps | ⬜ Planned |
@@ -106,9 +106,13 @@ generative-ai/
 │   │   ├── evaluation.py
 │   │   ├── evaluation.ipynb
 │   │   └── README.md
-│   └── 07-tool-use-agents/
-│       ├── tool_use_agents.py
-│       ├── tool_use_agents.ipynb
+│   ├── 07-tool-use-agents/
+│   │   ├── tool_use_agents.py
+│   │   ├── tool_use_agents.ipynb
+│   │   └── README.md
+│   └── 08-guardrails-safety/
+│       ├── guardrails.py
+│       ├── guardrails.ipynb
 │       └── README.md
 ├── projects/
 │   └── 01-support-ticket-assistant/
@@ -165,6 +169,7 @@ Modules run locally on open models by default, so no API key is needed. Modules 
 | Module 05 — RAG | Week 6 — RAG *(planned)*, and [Week 2](../weeks/week-02-fine-tuning-fundamentals) for the fine-tuning alternative |
 | Module 06 — Evaluation | [Week 2, Day 5](../weeks/week-02-fine-tuning-fundamentals/day-05-model-evaluation), Week 9 *(planned)* |
 | Module 07 — Agents | Week 8 — AI Agents & Tool Use *(planned)* |
+| Module 08 — Guardrails | [Module 02](01-beginner/02-prompt-engineering), Week 9 *(planned)* |
 | Module 09 — Prompting vs RAG vs Fine-Tuning | [Weeks 2–3](../weeks) |
 | Module 11 — Deployment | Week 7 — Local LLMs & Deployment *(planned)* |
 
