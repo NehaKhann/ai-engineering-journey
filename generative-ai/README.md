@@ -56,7 +56,7 @@ Each module contains:
 | Project | Builds on | Status |
 | :------ | :-------- | :----: |
 | [01 · Support Ticket Assistant](projects/01-support-ticket-assistant) (beginner) | Modules 02, 03, 04 | ✅ Complete |
-| [02 · Ask Your Documents](projects/02-ask-your-documents) (RAG with citations, PDF support, evaluation harness) | Modules 04, 05, 06 | ⬜ Planned |
+| [02 · Ask Your Documents](projects/02-ask-your-documents) (RAG with citations, PDF support, evaluation harness) | Modules 04, 05, 06 | ✅ Complete |
 | [03 · Tool-Using Agent](projects/03-tool-using-agent) (sandboxed files, human approval, red-teaming) | Modules 07, 08 | ⬜ Planned |
 | [04 · Production LLM API](projects/04-production-llm-api) (auth, rate limits, caching, streaming, metrics) | Modules 03, 11 | ⬜ Planned |
 
@@ -134,12 +134,10 @@ generative-ai/
 │       ├── deployment_llmops.ipynb
 │       └── README.md
 ├── projects/
-│   └── 01-support-ticket-assistant/
-│       ├── assistant/
-│       ├── data/
-│       ├── tests/
-│       ├── main.py
-│       └── README.md
+│   ├── 01-support-ticket-assistant/
+│   ├── 02-ask-your-documents/
+│   ├── 03-tool-using-agent/
+│   └── 04-production-llm-api/
 ├── interview-prep/
 │   ├── README.md
 │   └── cheatsheet.md

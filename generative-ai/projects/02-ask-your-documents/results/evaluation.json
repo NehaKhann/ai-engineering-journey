@@ -1,0 +1,157 @@
+{
+  "summary": {
+    "questions": 16,
+    "hit@1": 0.8125,
+    "hit@3": 1.0,
+    "mrr": 0.8854166666666666,
+    "answer_accuracy": 0.4375,
+    "wrong_because_retrieval": 0,
+    "wrong_because_generation": 9,
+    "unanswerable": 2,
+    "correctly_declined": 2
+  },
+  "records": [
+    {
+      "question": "What's the time-off allowance for someone who just joined?",
+      "answer": "[1]",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 3,
+      "correct": false
+    },
+    {
+      "question": "If I don't use all my holidays, how many roll over?",
+      "answer": "I don't know.",
+      "refused": true,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "Do I need sign-off before buying something costing more than seventy-five dollars?",
+      "answer": "[I don't know.]",
+      "refused": true,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "What's the nightly cap on accommodation when I travel?",
+      "answer": "$180 per night",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": true
+    },
+    {
+      "question": "How many office-free days per week are allowed?",
+      "answer": "[1] (vacation.md) vacation policy states that employees may work remotely up to 3 days per week.",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 2,
+      "correct": true
+    },
+    {
+      "question": "What money do I get to set up my work-from-home space?",
+      "answer": "$50 per month toward internet costs.",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "Who do I tell if my laptop goes missing, and how fast?",
+      "answer": "I don't know.",
+      "refused": true,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "How many characters must a password contain at minimum?",
+      "answer": "[1] (security.md) Passwords must be at least 14 characters long",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": true
+    },
+    {
+      "question": "What's the annual amount for courses and books?",
+      "answer": "$1,200 per year",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": true
+    },
+    {
+      "question": "How much do I earn for recommending a friend who gets hired?",
+      "answer": "$30 per month",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "When does my initial salary payment land?",
+      "answer": "[1]",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "How many weeks off does a new mother get?",
+      "answer": "[1] (vacation.md) 16 weeks fully paid for primary caregivers and 6 weeks fully paid for secondary caregivers.",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": true
+    },
+    {
+      "question": "Is plugging in a flash drive allowed?",
+      "answer": "I don't know.",
+      "refused": true,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "What is the deadline for the yearly security course?",
+      "answer": "The yearly security course must be completed by March 31 each year.",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 3,
+      "correct": true
+    },
+    {
+      "question": "How long is the trial period for new hires?",
+      "answer": "[1] (onboarding.md) New employee onboarding. On your first day, pick up your laptop from the IT desk at 9:30. You are assigned an onboarding buddy who will answer questions during your first month. Managers request GitHub and Slack access at least 5 days before your start date. Complete the security training and the code of conduct course within your first 2",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": false
+    },
+    {
+      "question": "What share of my family's health premiums does the company cover?",
+      "answer": "The company covers 70% of your family's health premiums.",
+      "refused": false,
+      "answerable": true,
+      "retrieval_rank": 1,
+      "correct": true
+    },
+    {
+      "question": "Who is the CEO of Northwind Labs?",
+      "answer": "I don't know.",
+      "refused": true,
+      "answerable": false,
+      "correct": true
+    },
+    {
+      "question": "What is the company policy on bringing pets to the office?",
+      "answer": "I don't know.",
+      "refused": true,
+      "answerable": false,
+      "correct": true
+    }
+  ]
+}

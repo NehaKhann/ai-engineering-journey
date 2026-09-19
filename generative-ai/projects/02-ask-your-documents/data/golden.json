@@ -1,0 +1,148 @@
+[
+  {
+    "question": "What's the time-off allowance for someone who just joined?",
+    "evidence": "20 days of paid vacation",
+    "expected": [
+      "20 days",
+      "20 paid",
+      "twenty"
+    ]
+  },
+  {
+    "question": "If I don't use all my holidays, how many roll over?",
+    "evidence": "Up to 5 unused days",
+    "expected": [
+      "5 unused",
+      "5 days",
+      "up to 5",
+      "five"
+    ]
+  },
+  {
+    "question": "Do I need sign-off before buying something costing more than seventy-five dollars?",
+    "evidence": "Anything over $75",
+    "expected": [
+      "$75",
+      "approval"
+    ]
+  },
+  {
+    "question": "What's the nightly cap on accommodation when I travel?",
+    "evidence": "up to $180 per night",
+    "expected": [
+      "$180",
+      "180"
+    ]
+  },
+  {
+    "question": "How many office-free days per week are allowed?",
+    "evidence": "up to 3 days per week",
+    "expected": [
+      "3 days",
+      "three days",
+      "up to 3"
+    ]
+  },
+  {
+    "question": "What money do I get to set up my work-from-home space?",
+    "evidence": "stipend of $500",
+    "expected": [
+      "$500"
+    ]
+  },
+  {
+    "question": "Who do I tell if my laptop goes missing, and how fast?",
+    "evidence": "within 1 hour",
+    "expected": [
+      "1 hour",
+      "one hour",
+      "an hour"
+    ]
+  },
+  {
+    "question": "How many characters must a password contain at minimum?",
+    "evidence": "at least 14 characters",
+    "expected": [
+      "14"
+    ]
+  },
+  {
+    "question": "What's the annual amount for courses and books?",
+    "evidence": "learning budget of $1,200",
+    "expected": [
+      "$1,200",
+      "1,200",
+      "1200"
+    ]
+  },
+  {
+    "question": "How much do I earn for recommending a friend who gets hired?",
+    "evidence": "referral bonus is $2,000",
+    "expected": [
+      "$2,000",
+      "2,000",
+      "2000"
+    ]
+  },
+  {
+    "question": "When does my initial salary payment land?",
+    "evidence": "first paycheck arrives on the 25th",
+    "expected": [
+      "25th",
+      "25"
+    ]
+  },
+  {
+    "question": "How many weeks off does a new mother get?",
+    "evidence": "16 weeks fully paid",
+    "expected": [
+      "16 weeks",
+      "16-week",
+      "sixteen"
+    ]
+  },
+  {
+    "question": "Is plugging in a flash drive allowed?",
+    "evidence": "USB storage drives are not permitted",
+    "expected": [
+      "not permitted",
+      "not allowed",
+      "prohibited",
+      "cannot",
+      "must not"
+    ]
+  },
+  {
+    "question": "What is the deadline for the yearly security course?",
+    "evidence": "March 31",
+    "expected": [
+      "march 31"
+    ]
+  },
+  {
+    "question": "How long is the trial period for new hires?",
+    "evidence": "probation period lasts 90 days",
+    "expected": [
+      "90 days",
+      "90-day"
+    ]
+  },
+  {
+    "question": "What share of my family's health premiums does the company cover?",
+    "evidence": "70% of dependents",
+    "expected": [
+      "70%",
+      "70 percent"
+    ]
+  },
+  {
+    "question": "Who is the CEO of Northwind Labs?",
+    "evidence": null,
+    "expected": null
+  },
+  {
+    "question": "What is the company policy on bringing pets to the office?",
+    "evidence": null,
+    "expected": null
+  }
+]
