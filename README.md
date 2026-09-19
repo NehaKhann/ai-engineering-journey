@@ -167,14 +167,17 @@ A parallel track covering Generative AI from beginner to intermediate, with inte
 | 02 | Prompt Engineering | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/02-prompt-engineering/prompt_engineering.ipynb) |
 | 03 | LLM APIs: Tokens, Streaming, Cost | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/03-llm-apis/llm_apis.ipynb) |
 | 04 | Embeddings & Vector Search | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/04-embeddings-vector-search/embeddings_vector_search.ipynb) |
-| Project | [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner project, runs from the command line) | |
+| Project | [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (🟢 beginner project, runs from the command line) | |
 | 05 | Retrieval-Augmented Generation (RAG) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/05-rag/rag.ipynb) |
 | 06 | Evaluation & LLM-as-Judge | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/06-evaluation/evaluation.ipynb) |
+| Project | [Ask Your Documents](generative-ai/projects/02-ask-your-documents) (🟡 intermediate project: RAG with citations and an evaluation harness) | |
 | 07 | Tool Use & Agents | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/07-tool-use-agents/tool_use_agents.ipynb) |
 | 08 | Guardrails, Safety & Hallucination | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/08-guardrails-safety/guardrails.ipynb) |
+| Project | [Tool-Using Agent](generative-ai/projects/03-tool-using-agent) (🟡 intermediate project: sandboxed tools and human approval) | |
 | 09 | Prompting vs RAG vs Fine-Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/09-prompting-vs-rag-vs-finetuning/prompting_rag_finetuning.ipynb) |
 | 10 | Multimodal & Diffusion Models | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/10-multimodal-diffusion/multimodal_diffusion.ipynb) |
 | 11 | Deployment & LLMOps | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/11-deployment-llmops/deployment_llmops.ipynb) |
+| Project | [Production LLM API](generative-ai/projects/04-production-llm-api) (🟡 intermediate project: auth, rate limits, caching, streaming) | |
 
 ---
 

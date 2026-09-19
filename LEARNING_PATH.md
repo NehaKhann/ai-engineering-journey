@@ -281,10 +281,10 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 
 **Projects**
 
-- ✅ [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner)
-- ✅ [Ask Your Documents](generative-ai/projects/02-ask-your-documents): RAG with citations and an evaluation harness
-- ✅ [Tool-Using Agent](generative-ai/projects/03-tool-using-agent): sandboxed tools and human approval
-- ✅ [Production LLM API](generative-ai/projects/04-production-llm-api): auth, rate limiting, caching, streaming
+- ✅ 🟢 **Beginner:** [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant)
+- ✅ 🟡 **Intermediate:** [Ask Your Documents](generative-ai/projects/02-ask-your-documents): RAG with citations and an evaluation harness
+- ✅ 🟡 **Intermediate:** [Tool-Using Agent](generative-ai/projects/03-tool-using-agent): sandboxed tools and human approval
+- ✅ 🟡 **Intermediate:** [Production LLM API](generative-ai/projects/04-production-llm-api): auth, rate limiting, caching, streaming
 
 ---
 
