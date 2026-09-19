@@ -1,0 +1,48 @@
+{"id": "B-001", "text": "I was charged twice for my monthly subscription.", "category": "billing", "priority": "high", "resolution": "The duplicate charge was reversed and the refund arrives in 5 to 7 business days."}
+{"id": "B-002", "text": "Please send me a copy of last month's invoice.", "category": "billing", "priority": "low", "resolution": "The invoice was re-sent by email. Invoices are also available under Billing > History."}
+{"id": "B-003", "text": "My card was declined but the payment shows as pending.", "category": "billing", "priority": "medium", "resolution": "Pending holds drop off within 3 days. Retry with a different card if it is urgent."}
+{"id": "B-004", "text": "Why did my plan price go up this month?", "category": "billing", "priority": "medium", "resolution": "The price changed because seats were added. Adjust the seat count under Billing > Plan."}
+{"id": "B-005", "text": "I cancelled my subscription but was billed again.", "category": "billing", "priority": "high", "resolution": "The cancellation was confirmed, the extra charge was refunded, and billing has stopped."}
+{"id": "B-006", "text": "Can I switch from monthly to annual billing?", "category": "billing", "priority": "low", "resolution": "Switched to annual billing with a prorated credit applied to the first invoice."}
+{"id": "B-007", "text": "I need a refund because the service was down for two days.", "category": "billing", "priority": "medium", "resolution": "A service credit was issued for the outage period."}
+{"id": "B-008", "text": "The invoice shows the wrong company name and tax ID.", "category": "billing", "priority": "low", "resolution": "Billing details were updated and a corrected invoice was issued."}
+{"id": "B-009", "text": "How do I update my credit card details?", "category": "billing", "priority": "low", "resolution": "Update your card under Billing > Payment methods."}
+{"id": "B-010", "text": "I was billed in the wrong currency.", "category": "billing", "priority": "medium", "resolution": "The currency was corrected and the difference was refunded."}
+{"id": "B-011", "text": "Do you offer a discount for non profit organizations?", "category": "billing", "priority": "low", "resolution": "A 20% non-profit discount is applied after verification."}
+{"id": "B-012", "text": "My PayPal payment failed three times and I cannot renew.", "category": "billing", "priority": "high", "resolution": "A new payment link was generated and the renewal was completed manually."}
+{"id": "T-001", "text": "The app crashes every time I open the reports page.", "category": "technical", "priority": "high", "resolution": "Fixed in version 4.2.1. Update the app and clear the cache."}
+{"id": "T-002", "text": "Dashboards take over a minute to load.", "category": "technical", "priority": "medium", "resolution": "Narrow the date range and enable data caching in the dashboard settings."}
+{"id": "T-003", "text": "The CSV export downloads an empty file.", "category": "technical", "priority": "medium", "resolution": "Reports over one million rows fail to export. Split the report into smaller parts."}
+{"id": "T-004", "text": "I get a 500 error whenever I call the API.", "category": "technical", "priority": "high", "resolution": "This was an incident on our side. It is resolved and requests can be retried."}
+{"id": "T-005", "text": "Webhooks stopped arriving yesterday.", "category": "technical", "priority": "high", "resolution": "The endpoint was auto-disabled after repeated failures. Re-enable it in developer settings."}
+{"id": "T-006", "text": "The mobile app will not sync my notes.", "category": "technical", "priority": "medium", "resolution": "Sign out and back in to refresh the sync token."}
+{"id": "T-007", "text": "Charts show the wrong timezone.", "category": "technical", "priority": "low", "resolution": "Set your timezone under Settings > Preferences."}
+{"id": "T-008", "text": "File upload fails for anything over 20 MB.", "category": "technical", "priority": "medium", "resolution": "The upload limit was raised to 100 MB. Please retry the upload."}
+{"id": "T-009", "text": "Search results do not include items added today.", "category": "technical", "priority": "low", "resolution": "The search index refreshes about every 10 minutes. New items appear after that."}
+{"id": "T-010", "text": "I keep getting 429 too many requests from the API.", "category": "technical", "priority": "medium", "resolution": "You reached the rate limit. Retry with backoff, or request a higher limit."}
+{"id": "T-011", "text": "The login page keeps spinning and never loads.", "category": "technical", "priority": "high", "resolution": "A CDN issue was resolved. Clear your browser cache and reload."}
+{"id": "T-012", "text": "Email notifications arrive hours late.", "category": "technical", "priority": "low", "resolution": "A mail queue backlog was cleared. Delays should not recur."}
+{"id": "A-001", "text": "I can't log in after resetting my password.", "category": "account", "priority": "high", "resolution": "The session cache was cleared. Log in again with the new password."}
+{"id": "A-002", "text": "How do I change the email address on my profile?", "category": "account", "priority": "low", "resolution": "Go to Settings > Profile and confirm the new address with the emailed code."}
+{"id": "A-003", "text": "Please delete my account and all my data.", "category": "account", "priority": "medium", "resolution": "Deletion is scheduled and completes within 30 days."}
+{"id": "A-004", "text": "I never received the verification email.", "category": "account", "priority": "medium", "resolution": "Check your spam folder. We also resent the verification email."}
+{"id": "A-005", "text": "Someone else logged into my account.", "category": "account", "priority": "high", "resolution": "The account was locked, all sessions were revoked, the password was reset, and two-factor authentication was enabled."}
+{"id": "A-006", "text": "How do I turn on two-factor authentication?", "category": "account", "priority": "low", "resolution": "Open Security settings and choose Two-factor authentication."}
+{"id": "A-007", "text": "I want to add my teammate to our workspace.", "category": "account", "priority": "low", "resolution": "Invite them under Team > Members and pick a viewer, editor, or admin role."}
+{"id": "A-008", "text": "My account was suspended and I do not know why.", "category": "account", "priority": "high", "resolution": "An automated check suspended it. It was reviewed and the suspension was lifted."}
+{"id": "A-009", "text": "Can I merge two accounts into one?", "category": "account", "priority": "medium", "resolution": "The accounts were merged and data from the second account was migrated."}
+{"id": "A-010", "text": "How do I change my username?", "category": "account", "priority": "low", "resolution": "Usernames can be changed once every 30 days in Settings."}
+{"id": "A-011", "text": "I lost my authenticator app and cannot sign in.", "category": "account", "priority": "high", "resolution": "Your identity was verified and two-factor authentication was reset."}
+{"id": "A-012", "text": "Please transfer ownership of the workspace to a colleague.", "category": "account", "priority": "medium", "resolution": "Ownership was transferred under Team > Settings."}
+{"id": "F-001", "text": "It would be great to have a dark mode.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request. Dark mode is on the roadmap."}
+{"id": "F-002", "text": "Please add support for exporting reports to PDF.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request. PDF export is under consideration."}
+{"id": "F-003", "text": "Can you add a Slack integration?", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request. A Slack integration is planned."}
+{"id": "F-004", "text": "I love the new dashboard, great work!", "category": "feedback", "priority": "low", "resolution": "Thank you for the kind words. We shared them with the team."}
+{"id": "F-005", "text": "The new layout is confusing, the old one was better.", "category": "feedback", "priority": "medium", "resolution": "Thanks for the honest feedback. We passed it to the design team."}
+{"id": "F-006", "text": "Please support single sign-on with Okta.", "category": "feedback", "priority": "medium", "resolution": "Single sign-on with Okta is available on the Enterprise plan."}
+{"id": "F-007", "text": "Add keyboard shortcuts for common actions.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request for keyboard shortcuts."}
+{"id": "F-008", "text": "We need role based permissions per project.", "category": "feedback", "priority": "medium", "resolution": "Logged as a feature request. Project-level permissions are on the roadmap."}
+{"id": "F-009", "text": "It would be nice to schedule reports by email.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request for scheduled report emails."}
+{"id": "F-010", "text": "Your documentation is missing examples for the API.", "category": "feedback", "priority": "low", "resolution": "Thanks. We added the request to the documentation backlog."}
+{"id": "F-011", "text": "Add a way to bulk edit tickets.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request for bulk editing."}
+{"id": "F-012", "text": "Please add a Hindi language option.", "category": "feedback", "priority": "low", "resolution": "Logged as a feature request. More languages are being evaluated."}

@@ -51,10 +51,17 @@ Each module contains:
 | 10 | Multimodal & Diffusion Models | ⬜ Planned |
 | 11 | Deployment & LLMOps | ⬜ Planned |
 
-### 🏆 Mini Projects
+### 🏆 Projects
 
 | Project | Builds on | Status |
 | :------ | :-------- | :----: |
+| [Support Ticket Assistant](projects/01-support-ticket-assistant) (beginner) | Modules 02, 03, 04 | ✅ Complete |
+| Chat with Your Documents (RAG with citations) | Modules 04, 05 | ⬜ Planned |
+| RAG Evaluation Harness | Module 06 | ⬜ Planned |
+| Tool-Using Agent | Module 07 | ⬜ Planned |
+| Production LLM API (FastAPI, streaming, caching, cost tracking) | Module 11 | ⬜ Planned |
+
+------ | :-------- | :----: |
 | Chat with Your PDF (RAG with citations) | Modules 04, 05 | ⬜ Planned |
 | Structured Extraction Pipeline (documents to validated JSON) | Modules 02, 03 | ⬜ Planned |
 | Prompt & RAG Evaluation Harness | Module 06 | ⬜ Planned |
@@ -88,6 +95,13 @@ generative-ai/
 │       ├── embeddings_vector_search.py
 │       ├── embeddings_vector_search.ipynb
 │       └── README.md
+├── projects/
+│   └── 01-support-ticket-assistant/
+│       ├── assistant/
+│       ├── data/
+│       ├── tests/
+│       ├── main.py
+│       └── README.md
 ├── interview-prep/
 │   ├── README.md
 │   └── cheatsheet.md
@@ -97,7 +111,7 @@ generative-ai/
 └── requirements.txt
 ```
 
-New modules, `02-intermediate/`, and `projects/` are added as each one is completed.
+The `02-intermediate/` modules and further projects are added as each one is completed.
 
 ---
 

@@ -167,6 +167,10 @@ for attempt in range(1, 4):
 # %% [markdown]
 # The pattern **ask → parse → validate → retry** is how production systems get reliable structure
 # from a model that is only *probably* right. Later modules add stronger tools for this.
+#
+# One caution: our `chat` uses greedy decoding, so retrying the **identical** prompt gives the
+# identical reply. A retry only helps if it changes something: add the bad reply and a correction to
+# the conversation, or sample with some randomness. The Support Ticket Assistant project does the first.
 
 # %% [markdown]
 # ## 5. Chain-of-thought

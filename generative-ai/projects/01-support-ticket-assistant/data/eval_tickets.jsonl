@@ -1,0 +1,20 @@
+{"text": "Money left my bank twice for one order of the pro plan.", "category": "billing", "priority": "high"}
+{"text": "Could you email me the receipt for March?", "category": "billing", "priority": "low"}
+{"text": "I quit the service last week yet a new charge appeared today.", "category": "billing", "priority": "high"}
+{"text": "Is there a cheaper rate if we pay yearly?", "category": "billing", "priority": "low"}
+{"text": "My renewal did not go through because the bank rejected the card.", "category": "billing", "priority": "medium"}
+{"text": "Everything freezes whenever I click on the analytics tab.", "category": "technical", "priority": "high"}
+{"text": "The spreadsheet I download from a big report is blank.", "category": "technical", "priority": "medium"}
+{"text": "Our integration has received no events since Monday.", "category": "technical", "priority": "high"}
+{"text": "Pages load really slowly since this morning.", "category": "technical", "priority": "medium"}
+{"text": "Requests to your endpoint keep getting rejected for being too frequent.", "category": "technical", "priority": "medium"}
+{"text": "I changed my password but the site still says my credentials are wrong.", "category": "account", "priority": "high"}
+{"text": "How can I change which email is tied to my profile?", "category": "account", "priority": "low"}
+{"text": "I need to permanently erase my profile and everything stored.", "category": "account", "priority": "medium"}
+{"text": "A stranger seems to be using my login.", "category": "account", "priority": "high"}
+{"text": "Please add a new colleague to our team space.", "category": "account", "priority": "low"}
+{"text": "A night theme would be really nice.", "category": "feedback", "priority": "low"}
+{"text": "Could reports be sent out automatically every Monday?", "category": "feedback", "priority": "low"}
+{"text": "Please allow login through our company Okta.", "category": "feedback", "priority": "medium"}
+{"text": "The redesign is hard to navigate, please bring back the old menu.", "category": "feedback", "priority": "medium"}
+{"text": "Could you translate the app into Hindi?", "category": "feedback", "priority": "low"}

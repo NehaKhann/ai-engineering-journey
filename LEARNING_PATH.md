@@ -279,13 +279,12 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 10 | Multimodal & Diffusion Models | Intermediate | ⬜ Planned |
 | 11 | Deployment & LLMOps | Intermediate | ⬜ Planned |
 
-**Mini Projects**
+**Projects**
 
-- Chat with Your PDF (RAG with citations)
-- Structured Extraction Pipeline
-- Prompt & RAG Evaluation Harness
+- ✅ [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner)
+- Chat with Your Documents (RAG with citations)
+- RAG Evaluation Harness
 - Tool-Using Agent
-- Text-to-Image Demo
 - Production LLM API
 
 ---

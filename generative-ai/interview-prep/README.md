@@ -54,6 +54,10 @@ For one-line answers, see the [Cheatsheet](cheatsheet.md).
 | What are the limitations of embedding-based retrieval? | [Q5](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
 | How would you choose and evaluate an embedding model? | [Q6](../01-beginner/04-embeddings-vector-search/README.md#-interview-qa) |
 
+### 🏆 Beginner Project — Support Ticket Assistant
+
+How to present it in an interview, with the questions it prepares you for, is in the [project README](../projects/01-support-ticket-assistant/README.md#-how-to-talk-about-this-project-in-an-interview).
+
 ---
 
 ## 🟡 Intermediate

@@ -164,6 +164,7 @@ A parallel track covering Generative AI from beginner to intermediate, with inte
 | 02 | Prompt Engineering | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/02-prompt-engineering/prompt_engineering.ipynb) |
 | 03 | LLM APIs: Tokens, Streaming, Cost | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/03-llm-apis/llm_apis.ipynb) |
 | 04 | Embeddings & Vector Search | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/01-beginner/04-embeddings-vector-search/embeddings_vector_search.ipynb) |
+| Project | [Support Ticket Assistant](generative-ai/projects/01-support-ticket-assistant) (beginner project, runs from the command line) | |
 
 ---
 

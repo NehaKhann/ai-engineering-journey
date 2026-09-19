@@ -1,0 +1,114 @@
+{
+  "knn": {
+    "category_accuracy": 0.95,
+    "priority_accuracy": 0.95,
+    "fallbacks": 0,
+    "seconds": 0.1,
+    "category_mistakes": [
+      [
+        "Please allow login through our company Okta.",
+        "feedback",
+        "account"
+      ]
+    ],
+    "n": 20
+  },
+  "llm": {
+    "category_accuracy": 0.5,
+    "priority_accuracy": 0.35,
+    "fallbacks": 0,
+    "seconds": 33.0,
+    "category_mistakes": [
+      [
+        "Could you email me the receipt for March?",
+        "billing",
+        "feedback"
+      ],
+      [
+        "I quit the service last week yet a new charge appeared today.",
+        "billing",
+        "technical"
+      ],
+      [
+        "My renewal did not go through because the bank rejected the card.",
+        "billing",
+        "technical"
+      ],
+      [
+        "The spreadsheet I download from a big report is blank.",
+        "technical",
+        "account"
+      ],
+      [
+        "I changed my password but the site still says my credentials are wrong.",
+        "account",
+        "technical"
+      ],
+      [
+        "I need to permanently erase my profile and everything stored.",
+        "account",
+        "technical"
+      ],
+      [
+        "Could reports be sent out automatically every Monday?",
+        "feedback",
+        "account"
+      ],
+      [
+        "Please allow login through our company Okta.",
+        "feedback",
+        "account"
+      ],
+      [
+        "The redesign is hard to navigate, please bring back the old menu.",
+        "feedback",
+        "technical"
+      ],
+      [
+        "Could you translate the app into Hindi?",
+        "feedback",
+        "technical"
+      ]
+    ],
+    "n": 20
+  },
+  "hybrid": {
+    "category_accuracy": 0.7,
+    "priority_accuracy": 0.35,
+    "fallbacks": 0,
+    "seconds": 30.5,
+    "category_mistakes": [
+      [
+        "Requests to your endpoint keep getting rejected for being too frequent.",
+        "technical",
+        "billing"
+      ],
+      [
+        "I need to permanently erase my profile and everything stored.",
+        "account",
+        "billing"
+      ],
+      [
+        "Could reports be sent out automatically every Monday?",
+        "feedback",
+        "technical"
+      ],
+      [
+        "Please allow login through our company Okta.",
+        "feedback",
+        "billing"
+      ],
+      [
+        "The redesign is hard to navigate, please bring back the old menu.",
+        "feedback",
+        "technical"
+      ],
+      [
+        "Could you translate the app into Hindi?",
+        "feedback",
+        "technical"
+      ]
+    ],
+    "n": 20
+  }
+}
