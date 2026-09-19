@@ -84,6 +84,17 @@ How to present it in an interview, with the questions it prepares you for, is in
 | How do you build a good golden set? | [Q5](../02-intermediate/06-evaluation/README.md#-interview-qa) |
 | What is the difference between offline and online evaluation? | [Q6](../02-intermediate/06-evaluation/README.md#-interview-qa) |
 
+### Module 07 — Tool Use & Agents
+
+| Question | Answer in |
+|---|---|
+| What is function calling, and how does it work? | [Q1](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+| What is an agent, and how is it different from a simple LLM chain or workflow? | [Q2](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+| Explain the ReAct pattern and how you stop an agent from looping forever. | [Q3](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+| How do you design good tools for an LLM? | [Q4](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+| What are the security risks of agents, and how do you mitigate them? | [Q5](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+| How do you evaluate an agent, and why are agents unreliable? | [Q6](../02-intermediate/07-tool-use-agents/README.md#-interview-qa) |
+
 Added as further modules are completed.
 
 ---

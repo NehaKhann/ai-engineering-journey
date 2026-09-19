@@ -111,3 +111,22 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Offline vs online** | Fixed test set before release vs real usage signals after. Failures found online become new offline tests. |
 
 [Full explanations →](../02-intermediate/06-evaluation/README.md)
+
+---
+
+## Module 07 — Tool Use & Agents
+
+| Concept | One-liner |
+|---|---|
+| **Function calling** | Model outputs a structured request to call a function. Your code runs it and returns the result. The model never executes anything. |
+| **Agent** | An LLM that picks its next step at runtime, in a loop, until done. |
+| **Workflow vs agent** | Code fixes the steps vs the model decides them. Use the simplest structure that works. |
+| **ReAct** | Alternate reasoning and acting: think, call a tool, observe, repeat. |
+| **Loop limits** | Max steps, timeout, spend budget, repeat-call detection, graceful failure. |
+| **Tool design** | Few tools, precise descriptions, tight schemas, concise results, helpful errors. Tool schemas cost tokens on every call. |
+| **Untrusted arguments** | The model picks them and can be tricked. Validate and whitelist. Never `eval`. |
+| **Indirect injection** | Instructions hidden in content the agent reads. Least privilege, human approval, treat tool output as data. |
+| **Compounding errors** | 90% per step over 5 steps is about 59% overall. Keep tasks short, add checks. |
+| **Testing agents** | Scripted fake model for the loop, then a scored task set for answer, tool choice, steps, and cost. |
+
+[Full explanations →](../02-intermediate/07-tool-use-agents/README.md)

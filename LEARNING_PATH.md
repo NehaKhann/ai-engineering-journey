@@ -273,7 +273,7 @@ A parallel track to the weekly curriculum. The weeks go **deep** on one topic at
 | 04 | Embeddings & Vector Search | Beginner | ✅ Complete |
 | 05 | Retrieval-Augmented Generation (RAG) | Intermediate | ✅ Complete |
 | 06 | Evaluation & LLM-as-Judge | Intermediate | ✅ Complete |
-| 07 | Tool Use & Agents | Intermediate | ⬜ Planned |
+| 07 | Tool Use & Agents | Intermediate | ✅ Complete |
 | 08 | Guardrails, Safety & Hallucination | Intermediate | ⬜ Planned |
 | 09 | Prompting vs RAG vs Fine-Tuning | Intermediate | ⬜ Planned |
 | 10 | Multimodal & Diffusion Models | Intermediate | ⬜ Planned |

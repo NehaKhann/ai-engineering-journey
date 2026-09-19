@@ -45,7 +45,7 @@ Each module contains:
 | :----- | :---- | :----: |
 | [05](02-intermediate/05-rag) | Retrieval-Augmented Generation (RAG) | ✅ Complete |
 | [06](02-intermediate/06-evaluation) | Evaluation & LLM-as-Judge | ✅ Complete |
-| 07 | Tool Use & Agents | ⬜ Planned |
+| [07](02-intermediate/07-tool-use-agents) | Tool Use & Agents | ✅ Complete |
 | 08 | Guardrails, Safety & Hallucination | ⬜ Planned |
 | 09 | Prompting vs RAG vs Fine-Tuning | ⬜ Planned |
 | 10 | Multimodal & Diffusion Models | ⬜ Planned |
@@ -101,10 +101,14 @@ generative-ai/
 │   │   ├── rag.py
 │   │   ├── rag.ipynb
 │   │   └── README.md
-│   └── 06-evaluation/
-│       ├── assets/
-│       ├── evaluation.py
-│       ├── evaluation.ipynb
+│   ├── 06-evaluation/
+│   │   ├── assets/
+│   │   ├── evaluation.py
+│   │   ├── evaluation.ipynb
+│   │   └── README.md
+│   └── 07-tool-use-agents/
+│       ├── tool_use_agents.py
+│       ├── tool_use_agents.ipynb
 │       └── README.md
 ├── projects/
 │   └── 01-support-ticket-assistant/
