@@ -16,3 +16,6 @@ scheduler.pt
 trainer_state.json
 training_args.bin
 rng_state.pth
+
+# Personal drafts, not published
+generative-ai/articles/

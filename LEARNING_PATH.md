@@ -261,7 +261,7 @@ Build a complete production-grade AI system combining:
 
 # 🎨 Generative AI Track
 
-A parallel track to the weekly curriculum. The weeks go **deep** on one topic at a time; this track goes **wide** across Generative AI, with interview preparation, mini projects, and an article for every module.
+A parallel track to the weekly curriculum. The weeks go **deep** on one topic at a time; this track goes **wide** across Generative AI, with interview preparation and mini projects in every module.
 
 ➡️ **[Open the Generative AI Track](generative-ai/README.md)**
 

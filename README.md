@@ -57,8 +57,7 @@ ai-engineering-journey/
 │
 ├── generative-ai/
 │   ├── 01-beginner/
-│   ├── interview-prep/
-│   └── articles/
+│   └── interview-prep/
 │
 ├── projects/
 │   ├── llm-explainer-dashboard/

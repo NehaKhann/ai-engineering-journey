@@ -18,8 +18,6 @@ Run and modify the code
 Practice the interview questions
         ↓
 Build a mini project
-        ↓
-Write the article
 ```
 
 Each module contains:
@@ -27,7 +25,6 @@ Each module contains:
 - 📖 A concept README explaining the idea in plain language
 - 💻 A runnable `.py` script and a matching `.ipynb` notebook
 - 🎤 An **Interview Q&A** section: short answer, deeper answer, and the follow-ups interviewers ask
-- ✍️ A short article you can publish
 
 ---
 
@@ -86,7 +83,6 @@ generative-ai/
 │   └── cheatsheet.md
 ├── tools/
 │   └── py_to_notebook.py   # builds each notebook from its .py script
-├── articles/
 ├── README.md
 └── requirements.txt
 ```
