@@ -166,3 +166,21 @@ One-line answers for quick revision. Each links to the module with the full expl
 | **Deciding** | Eval set with reworded, unanswerable, and changed-fact questions. Report uncertainty on small sets. |
 
 [Full explanations →](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md)
+
+---
+
+## Module 10 — Multimodal & Diffusion Models
+
+| Concept | One-liner |
+|---|---|
+| **Diffusion** | Add noise in a fixed forward process, train a network to predict the noise, generate by denoising static step by step. |
+| **Training target** | Predict the noise that was added (mean squared error). |
+| **Sampling speed** | Many sequential passes. Speed-ups: fewer-step samplers (DDIM), distillation, latent diffusion. Diminishing returns (25 steps matched 100 here). |
+| **Latent diffusion** | Run diffusion in a compressed VAE latent space, far cheaper than pixels. |
+| **CLIP** | Images and text embedded in one space, trained so captions sit near their pictures. |
+| **Zero-shot classification** | Write each label as a sentence, pick the one closest to the image. No training on your classes. |
+| **Multimodal weaknesses** | Counting, spatial relations (left/right), small text, fine detail, negation. Test them with known-answer examples and compare with chance. |
+| **Text steering** | Prompt embeddings feed the denoiser at every step. Classifier-free guidance pushes further toward the prompt. |
+| **Evaluating image models** | FID (distribution quality), CLIP score (prompt match, but CLIP is weak at counting and layout), plus human evaluation. |
+
+[Full explanations →](../02-intermediate/10-multimodal-diffusion/README.md)

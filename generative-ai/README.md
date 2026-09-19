@@ -48,7 +48,7 @@ Each module contains:
 | [07](02-intermediate/07-tool-use-agents) | Tool Use & Agents | ✅ Complete |
 | [08](02-intermediate/08-guardrails-safety) | Guardrails, Safety & Hallucination | ✅ Complete |
 | [09](02-intermediate/09-prompting-vs-rag-vs-finetuning) | Prompting vs RAG vs Fine-Tuning | ✅ Complete |
-| 10 | Multimodal & Diffusion Models | ⬜ Planned |
+| [10](02-intermediate/10-multimodal-diffusion) | Multimodal & Diffusion Models | ✅ Complete |
 | 11 | Deployment & LLMOps | ⬜ Planned |
 
 ### 🏆 Projects
@@ -120,9 +120,14 @@ generative-ai/
 │   │   ├── guardrails.py
 │   │   ├── guardrails.ipynb
 │   │   └── README.md
-│   └── 09-prompting-vs-rag-vs-finetuning/
-│       ├── prompting_rag_finetuning.py
-│       ├── prompting_rag_finetuning.ipynb
+│   ├── 09-prompting-vs-rag-vs-finetuning/
+│   │   ├── prompting_rag_finetuning.py
+│   │   ├── prompting_rag_finetuning.ipynb
+│   │   └── README.md
+│   └── 10-multimodal-diffusion/
+│       ├── assets/
+│       ├── multimodal_diffusion.py
+│       ├── multimodal_diffusion.ipynb
 │       └── README.md
 ├── projects/
 │   └── 01-support-ticket-assistant/

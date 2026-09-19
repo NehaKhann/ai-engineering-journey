@@ -173,6 +173,7 @@ A parallel track covering Generative AI from beginner to intermediate, with inte
 | 07 | Tool Use & Agents | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/07-tool-use-agents/tool_use_agents.ipynb) |
 | 08 | Guardrails, Safety & Hallucination | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/08-guardrails-safety/guardrails.ipynb) |
 | 09 | Prompting vs RAG vs Fine-Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/09-prompting-vs-rag-vs-finetuning/prompting_rag_finetuning.ipynb) |
+| 10 | Multimodal & Diffusion Models | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NehaKhann/ai-engineering-journey/blob/main/generative-ai/02-intermediate/10-multimodal-diffusion/multimodal_diffusion.ipynb) |
 
 ---
 

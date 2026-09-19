@@ -117,6 +117,17 @@ How to present it in an interview, with the questions it prepares you for, is in
 | What are the cost trade-offs between RAG and fine-tuning? | [Q5](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
 | How do you decide with data instead of opinion? | [Q6](../02-intermediate/09-prompting-vs-rag-vs-finetuning/README.md#-interview-qa) |
 
+### Module 10 — Multimodal & Diffusion Models
+
+| Question | Answer in |
+|---|---|
+| How does a diffusion model generate an image? | [Q1](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+| Why is diffusion slow at generation, and how is it sped up? | [Q2](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+| What is CLIP, and what is zero-shot classification? | [Q3](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+| What are the known weaknesses of multimodal models, and how would you test for them? | [Q4](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+| How does a text prompt control the image in a text-to-image model? | [Q5](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+| How do you evaluate a generative image model? | [Q6](../02-intermediate/10-multimodal-diffusion/README.md#-interview-qa) |
+
 Added as further modules are completed.
 
 ---
